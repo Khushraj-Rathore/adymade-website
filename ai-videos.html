@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Videos &amp; Creatives | Adymade — Scroll-Stopping Video Content Built With AI</title>
+<meta name="description" content="Adymade creates AI-powered brand videos, product ads, UGC-style content, 2D animations, and social media creatives. 80% less cost than traditional production. 3-7 day delivery. Based in Indore, India.">
+<meta name="keywords" content="AI video production India, AI video agency Indore, brand videos India, product demo video AI, UGC AI videos, 2D animation India, social media video creatives, affordable video production India">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --abyss:#08051A;--deep-space:#0D0920;--midnight:#1A1440;--navy:#251C55;--slate:#362870;
+  --royal:#320082;--imperial:#4A00C0;--electric:#5A14F0;--vivid:#7C3AED;
+  --lavender:#A78BFA;--pale:#C4B5FD;--cyan:#06B6D4;
+  --white:#FFFFFF;--white-90:rgba(255,255,255,0.9);--body-text:#7766AA;--muted:#4A3870;
+  --success:#10B981;--warning:#F59E0B;
+  --max-w:1280px;--radius-sm:8px;--radius-md:14px;--radius-lg:22px;--radius-pill:999px;
+  --font:'Plus Jakarta Sans',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--abyss);color:var(--white-90);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:var(--font);cursor:pointer}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 20px}
+@media(min-width:768px){.container{padding:0 48px}}
+h1,h2,h3,h4{line-height:1.15;letter-spacing:-0.02em;color:var(--white);font-weight:800}
+h1{font-size:clamp(36px,5vw,68px)}
+h2{font-size:clamp(28px,4vw,48px);font-weight:700}
+h3{font-size:clamp(17px,2.5vw,22px);font-weight:600}
+.grad{background:linear-gradient(120deg,var(--electric) 0%,var(--cyan) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--lavender);padding:6px 16px;background:rgba(90,20,240,.12);border:1px solid rgba(167,139,250,.2);border-radius:var(--radius-pill);margin-bottom:20px}
+.eyebrow::before{content:'';width:6px;height:6px;background:var(--cyan);border-radius:50%}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;font-size:15px;font-weight:600;border-radius:var(--radius-sm);border:none;transition:all .22s ease;white-space:nowrap;cursor:pointer}
+.btn-primary{background:var(--electric);color:var(--white)}
+.btn-primary:hover{background:var(--imperial);box-shadow:0 8px 28px -6px rgba(90,20,240,.7);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--lavender);border:1.5px solid var(--slate)}
+.btn-ghost:hover{border-color:var(--electric);color:var(--pale);background:rgba(90,20,240,.08)}
+
+/* HEADER */
+header{position:fixed;inset:0 0 auto 0;z-index:200;background:rgba(8,5,26,.85);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(54,40,112,.5)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.logo-wrap{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.logo-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--royal) 0%,var(--electric) 60%,var(--cyan) 100%);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:white;flex-shrink:0}
+.logo-text{font-size:22px;font-weight:800;color:var(--white);letter-spacing:-.03em}
+.nav-links{display:none;align-items:center;gap:8px;list-style:none;flex:1;justify-content:center}
+@media(min-width:1024px){.nav-links{display:flex}}
+.nav-links>li{position:relative}
+.nav-links a{display:flex;align-items:center;gap:4px;padding:8px 14px;font-size:14px;font-weight:500;color:var(--body-text);border-radius:var(--radius-sm);transition:all .18s}
+.nav-links a:hover{color:var(--white);background:rgba(90,20,240,.1)}
+.chev{font-size:10px;transition:transform .2s}
+.nav-links li:hover .chev{transform:rotate(180deg)}
+.dropdown{position:absolute;top:calc(100% + 10px);left:50%;min-width:680px;background:var(--deep-space);border:1px solid var(--slate);border-radius:var(--radius-md);padding:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;opacity:0;visibility:hidden;transform:translateX(-50%) translateY(8px);transition:all .2s;box-shadow:0 32px 64px -16px rgba(0,0,0,.8)}
+.nav-links li:hover .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.dropdown-sm{min-width:420px;grid-template-columns:1fr 1fr}
+.dd-col h5{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--cyan);margin-bottom:14px}
+.dd-col ul{list-style:none}
+.dd-col li{margin-bottom:10px;position:static}
+.dd-col a{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--body-text);padding:6px 8px;border-radius:6px;font-weight:500}
+.dd-col a:hover{color:var(--white);background:rgba(90,20,240,.12)}
+.dd-icon{width:30px;height:30px;border-radius:7px;background:rgba(90,20,240,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dd-icon svg{width:16px;height:16px}
+.nav-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.wa-nav{width:40px;height:40px;background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.wa-nav:hover{background:#25D366}
+.wa-nav svg{width:20px;height:20px;fill:#25D366}
+.wa-nav:hover svg{fill:white}
+.nav-cta{padding:10px 22px;background:var(--electric);color:white;border-radius:var(--radius-sm);font-size:14px;font-weight:600;transition:all .2s;border:none}
+.nav-cta:hover{background:var(--imperial);box-shadow:0 6px 20px -4px rgba(90,20,240,.6)}
+.mob-menu-btn{display:flex;flex-direction:column;gap:5px;background:none;border:none;padding:8px}
+.mob-menu-btn span{width:22px;height:2px;background:var(--white);border-radius:2px}
+@media(min-width:1024px){.mob-menu-btn{display:none}}
+
+/* SECTIONS */
+.section{padding:110px 0}
+@media(max-width:768px){.section{padding:72px 0}}
+.section-alt{background:var(--deep-space)}
+.section-header{text-align:center;max-width:780px;margin:0 auto 64px}
+.section-header h2{margin-bottom:18px}
+.section-header p{font-size:18px;color:var(--body-text);line-height:1.65}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:140px 0 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-15%;right:-10%;width:700px;height:700px;background:radial-gradient(circle,rgba(90,20,240,.18) 0%,transparent 65%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-10%;left:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(6,182,212,.07) 0%,transparent 65%);pointer-events:none}
+.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(54,40,112,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(54,40,112,.13) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 80%)}
+.hero-inner{position:relative;z-index:1;max-width:840px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 8px;background:rgba(90,20,240,.1);border:1px solid rgba(167,139,250,.2);border-radius:var(--radius-pill);font-size:12px;color:var(--lavender);margin-bottom:28px;font-weight:500}
+.badge-dot{width:22px;height:22px;background:linear-gradient(135deg,var(--royal),var(--electric));border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.badge-dot svg{width:12px;height:12px;fill:white}
+.hero h1{margin-bottom:24px}
+.hero-sub{font-size:19px;color:var(--body-text);max-width:640px;line-height:1.7;margin-bottom:40px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:48px}
+.hero-trust{display:flex;flex-wrap:wrap;gap:24px}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.trust-item svg{width:16px;height:16px;stroke:var(--cyan);fill:none;stroke-width:2.5;flex-shrink:0}
+
+/* COMPARISON TABLE */
+.compare-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.compare-table{width:100%;min-width:560px;border-collapse:collapse}
+.compare-table th{padding:14px 20px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.compare-table td{padding:13px 20px;font-size:14px;border-bottom:1px solid var(--slate)}
+.compare-table tbody tr:last-child td{border-bottom:none}
+.col-label{text-align:left;color:var(--body-text);width:38%}
+.col-trad{text-align:center;width:31%;color:var(--muted)}
+.col-ai{text-align:center;width:31%}
+.th-label{background:var(--midnight);color:var(--body-text);border-radius:var(--radius-sm) 0 0 var(--radius-sm)}
+.th-trad{background:var(--midnight);color:var(--muted)}
+.th-ai{background:linear-gradient(135deg,var(--royal),var(--electric));color:white;border-radius:0 var(--radius-sm) var(--radius-sm) 0}
+.row-odd{background:rgba(255,255,255,.02)}
+.val-good{color:var(--cyan);font-weight:600}
+.val-bad{color:var(--muted)}
+.check-icon{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;background:rgba(16,185,129,.15);border-radius:50%}
+.check-icon svg{width:11px;height:11px;stroke:var(--success);fill:none;stroke-width:2.5}
+.cross-icon{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;background:rgba(74,40,112,.3);border-radius:50%}
+.cross-icon svg{width:11px;height:11px;stroke:var(--muted);fill:none;stroke-width:2.5}
+
+/* WHAT IS — two column */
+.what-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+@media(min-width:900px){.what-grid{grid-template-columns:1fr 1fr}}
+.what-text h2{margin-bottom:20px}
+.what-text p{font-size:16px;color:var(--body-text);line-height:1.75;margin-bottom:16px}
+
+/* VIDEO TYPES VISUAL */
+.vt-visual{background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-lg);padding:32px;position:relative;overflow:hidden}
+.vt-visual::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(6,182,212,.12),transparent 70%)}
+.vt-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative;z-index:1}
+.vt-item{display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(90,20,240,.08);border:1px solid rgba(90,20,240,.2);border-radius:var(--radius-sm)}
+.vt-item-icon{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,rgba(50,0,130,.7),rgba(90,20,240,.5));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.vt-item-icon svg{width:16px;height:16px;stroke:var(--lavender);fill:none;stroke-width:2}
+.vt-item-text{font-size:13px;font-weight:600;color:var(--white-90)}
+
+/* FEATURES */
+.features-grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:560px){.features-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.features-grid{grid-template-columns:repeat(3,1fr)}}
+.feat-card{background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-md);padding:32px 28px;transition:all .28s;position:relative;overflow:hidden}
+.feat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--electric),var(--cyan));opacity:0;transition:opacity .28s}
+.feat-card::after{content:'';position:absolute;bottom:-50px;right:-50px;width:140px;height:140px;background:radial-gradient(circle,rgba(90,20,240,.1) 0%,transparent 70%);transition:all .4s}
+.feat-card:hover{border-color:rgba(90,20,240,.55);transform:translateY(-6px);box-shadow:0 20px 40px -16px rgba(90,20,240,.22)}
+.feat-card:hover::before{opacity:1}
+.feat-card:hover::after{bottom:-20px;right:-20px}
+.feat-icon{width:52px;height:52px;border-radius:13px;background:linear-gradient(135deg,rgba(50,0,130,.6),rgba(90,20,240,.4));border:1px solid rgba(90,20,240,.3);display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:all .28s}
+.feat-icon svg{width:26px;height:26px;stroke:var(--lavender);fill:none;stroke-width:1.8}
+.feat-card:hover .feat-icon{background:linear-gradient(135deg,var(--royal),var(--electric));border-color:transparent}
+.feat-card:hover .feat-icon svg{stroke:white}
+.feat-card h3{font-size:18px;margin-bottom:10px}
+.feat-card p{font-size:14px;color:var(--body-text);line-height:1.65}
+
+/* STEPS */
+.steps-outer{background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-lg);overflow:hidden}
+.steps-grid{display:grid;grid-template-columns:1fr}
+@media(min-width:768px){.steps-grid{grid-template-columns:repeat(4,1fr)}}
+.step-item{padding:32px 28px;position:relative}
+@media(min-width:768px){
+  .step-item:not(:last-child)::after{content:'';position:absolute;top:52px;right:-1px;width:2px;height:calc(100% - 52px);background:linear-gradient(to bottom,var(--slate),transparent)}
+}
+@media(max-width:767px){.step-item{border-bottom:1px solid var(--slate)}.step-item:last-child{border-bottom:none}}
+.step-num{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--royal),var(--electric));display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:white;margin-bottom:20px;flex-shrink:0;box-shadow:0 0 0 6px rgba(90,20,240,.12)}
+.step-item h3{font-size:17px;margin-bottom:10px}
+.step-item p{font-size:14px;color:var(--body-text);line-height:1.65}
+
+/* PRICING TEASER */
+.pricing-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:560px){.pricing-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.pricing-grid{grid-template-columns:repeat(4,1fr)}}
+.price-card{background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-md);padding:24px;transition:all .25s;position:relative;overflow:hidden}
+.price-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--electric),var(--cyan));opacity:0;transition:opacity .3s}
+.price-card:hover{border-color:rgba(90,20,240,.45);transform:translateY(-4px)}
+.price-card:hover::before{opacity:1}
+.price-card.popular{border-color:rgba(6,182,212,.35);background:linear-gradient(135deg,var(--midnight),rgba(6,182,212,.04))}
+.price-card.popular::before{opacity:1;background:linear-gradient(90deg,var(--cyan),var(--electric))}
+.popular-badge{position:absolute;top:12px;right:12px;padding:3px 10px;background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);border-radius:var(--radius-pill);font-size:10px;font-weight:700;color:var(--cyan);letter-spacing:.05em;text-transform:uppercase}
+.price-card-icon{width:44px;height:44px;border-radius:11px;background:linear-gradient(135deg,rgba(50,0,130,.5),rgba(90,20,240,.35));border:1px solid rgba(90,20,240,.25);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.price-card-icon svg{width:22px;height:22px;stroke:var(--lavender);fill:none;stroke-width:1.8}
+.price-card.popular .price-card-icon{background:linear-gradient(135deg,rgba(6,182,212,.2),rgba(90,20,240,.3));border-color:rgba(6,182,212,.3)}
+.price-card.popular .price-card-icon svg{stroke:var(--cyan)}
+.price-title{font-size:15px;font-weight:700;color:var(--white);margin-bottom:6px}
+.price-amount{font-size:22px;font-weight:800;color:var(--cyan);margin-bottom:4px}
+.price-card.popular .price-amount{color:var(--cyan)}
+.price-duration{font-size:12px;color:var(--muted);margin-bottom:12px}
+.price-desc{font-size:13px;color:var(--body-text);line-height:1.55}
+
+/* STATS */
+.stats-band{padding:80px 0;background:linear-gradient(135deg,var(--deep-space) 0%,var(--midnight) 100%);border-top:1px solid var(--slate);border-bottom:1px solid var(--slate);position:relative;overflow:hidden}
+.stats-band::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(90,20,240,.1) 0%,transparent 70%);pointer-events:none}
+.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;position:relative;z-index:1}
+@media(min-width:768px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
+.stat-box{text-align:center}
+.stat-number{font-size:clamp(40px,6vw,64px);font-weight:800;line-height:1;margin-bottom:10px;background:linear-gradient(120deg,var(--lavender),var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat-lbl{font-size:13px;color:var(--body-text);font-weight:500;letter-spacing:.05em;text-transform:uppercase}
+
+/* FAQ */
+.faq-wrap{max-width:760px;margin:0 auto}
+.faq-item{background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-md);margin-bottom:10px;overflow:hidden;transition:border-color .2s}
+.faq-item.open{border-color:rgba(90,20,240,.5)}
+.faq-btn{width:100%;padding:22px 24px;background:transparent;border:none;color:var(--white);font-size:16px;font-weight:600;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:var(--font);cursor:pointer}
+.faq-toggle{width:28px;height:28px;border-radius:50%;background:rgba(90,20,240,.15);border:1px solid var(--slate);display:flex;align-items:center;justify-content:center;color:var(--lavender);flex-shrink:0;transition:all .2s}
+.faq-toggle svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.5;transition:transform .2s}
+.faq-item.open .faq-toggle{background:var(--electric);border-color:var(--electric);color:white}
+.faq-item.open .faq-toggle svg{transform:rotate(45deg)}
+.faq-body{max-height:0;overflow:hidden;transition:max-height .32s ease}
+.faq-item.open .faq-body{max-height:400px}
+.faq-inner{padding:0 24px 24px;font-size:15px;color:var(--body-text);line-height:1.75}
+
+/* CTA */
+.page-cta{background:linear-gradient(135deg,#030110 0%,#1A0060 30%,var(--royal) 58%,#4A10C8 82%,#6020A8 100%);position:relative;overflow:hidden}
+.page-cta::before{content:'';position:absolute;top:-40%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(6,182,212,.1) 0%,transparent 60%)}
+.page-cta::after{content:'';position:absolute;bottom:-30%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(10,0,50,.6) 0%,transparent 60%)}
+.page-cta-inner{position:relative;z-index:1;text-align:center;padding:100px 0}
+.page-cta-inner h2{color:white;margin-bottom:20px}
+.page-cta-inner>p{font-size:19px;color:rgba(255,255,255,.8);margin-bottom:40px;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.65}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-btn-w{padding:16px 32px;background:white;color:var(--electric);border-radius:var(--radius-sm);font-size:16px;font-weight:700;border:none;transition:all .22s;display:flex;align-items:center;gap:8px;cursor:pointer}
+.cta-btn-w:hover{background:var(--abyss);color:white;transform:translateY(-2px)}
+.cta-btn-g{padding:16px 32px;background:transparent;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.25);border-radius:var(--radius-sm);font-size:16px;font-weight:600;transition:all .22s;display:flex;align-items:center;gap:8px;cursor:pointer}
+.cta-btn-g:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.08);color:white}
+
+/* FOOTER */
+footer{background:var(--abyss);border-top:1px solid var(--slate);padding:80px 0 36px}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:40px;margin-bottom:56px}
+@media(min-width:560px){.footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.footer-grid{grid-template-columns:1.6fr repeat(4,1fr)}}
+.foot-brand p{font-size:14px;color:var(--body-text);margin:16px 0 24px;max-width:300px;line-height:1.65}
+.socials{display:flex;gap:10px}
+.soc{width:38px;height:38px;background:var(--midnight);border:1px solid var(--slate);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--body-text);transition:all .2s;text-decoration:none}
+.soc:hover{border-color:var(--electric);color:var(--lavender);transform:translateY(-2px)}
+.soc svg{width:17px;height:17px;fill:currentColor}
+.foot-col h5{font-size:13px;font-weight:600;color:var(--white);margin-bottom:18px;letter-spacing:.02em}
+.foot-col ul{list-style:none}
+.foot-col li{margin-bottom:12px}
+.foot-col a{font-size:13px;color:var(--body-text);transition:color .2s}
+.foot-col a:hover{color:var(--lavender)}
+.foot-bottom{padding-top:28px;border-top:1px solid var(--slate);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
+.foot-bottom p{font-size:13px;color:var(--muted)}
+.foot-legal{display:flex;gap:24px}
+.foot-legal a{font-size:13px;color:var(--muted);transition:color .2s}
+.foot-legal a:hover{color:var(--lavender)}
+
+/* STICKY WA */
+.wa-float{position:fixed;bottom:28px;right:28px;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:300;box-shadow:0 8px 24px rgba(37,211,102,.35);transition:all .22s;text-decoration:none;animation:waPulse 2.8s infinite}
+@keyframes waPulse{0%{box-shadow:0 8px 24px rgba(37,211,102,.35),0 0 0 0 rgba(37,211,102,.4)}70%{box-shadow:0 8px 24px rgba(37,211,102,.35),0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 8px 24px rgba(37,211,102,.35),0 0 0 0 rgba(37,211,102,0)}}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:30px;height:30px;fill:white}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="/" class="logo-wrap"><div class="logo-icon">A</div><span class="logo-text">adymade</span></a>
+      <ul class="nav-links">
+        <li>
+          <a href="#">Services <span class="chev">&#9662;</span></a>
+          <div class="dropdown">
+            <div class="dd-col">
+              <h5>AI &amp; Automation</h5>
+              <ul>
+                <li><a href="/ai-automation.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M4.93 19.07l1.41-1.41m11.32-11.32 1.41-1.41"/></svg></span>AI Automation &amp; Agents</a></li>
+                <li><a href="/ai-videos.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></span>AI Videos &amp; Creatives</a></li>
+                <li><a href="/compliance-videos.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>Compliance Videos</a></li>
+                <li><a href="/geo.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>GEO &#8212; AI Search Ranking</a></li>
+              </ul>
+            </div>
+            <div class="dd-col">
+              <h5>Development</h5>
+              <ul>
+                <li><a href="/web-development.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>Web &amp; App Development</a></li>
+                <li><a href="/software-development.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>Custom Software</a></li>
+              </ul>
+              <h5 style="margin-top:20px">Marketing</h5>
+              <ul>
+                <li><a href="/digital-marketing.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>Digital Marketing</a></li>
+                <li><a href="/digital-marketing#seo"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>SEO Services</a></li>
+              </ul>
+            </div>
+            <div class="dd-col" style="background:rgba(90,20,240,.06);border-radius:10px;padding:16px">
+              <h5>GCC Expertise</h5>
+              <div style="margin-bottom:12px">
+                <div style="font-size:13px;color:var(--lavender);font-weight:600;margin-bottom:4px">&#127480;&#127462; RGS &#8212; Tamimi Group</div>
+                <div style="font-size:12px;color:var(--body-text);line-height:1.5">Website built for a Tamimi Group scaffolding company in Saudi Arabia</div>
+              </div>
+              <a href="/case-studies/rgs-saudi-arabia" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--cyan)">View case study &#8594;</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">Industries <span class="chev">&#9662;</span></a>
+          <div class="dropdown dropdown-sm">
+            <div class="dd-col">
+              <h5>By Industry</h5>
+              <ul>
+                <li><a href="/industries/construction"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>Construction &amp; Scaffolding</a></li>
+                <li><a href="/industries/healthcare"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>Healthcare &amp; Clinics</a></li>
+              </ul>
+            </div>
+            <div class="dd-col">
+              <h5>&nbsp;</h5>
+              <ul>
+                <li><a href="/industries/saas"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg></span>SaaS &amp; Tech</a></li>
+                <li><a href="/industries/manufacturing"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 0 0 2 12h2"/></svg></span>Manufacturing</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li><a href="/case-studies.html">Our Work</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://wa.link/u03r6i" class="wa-nav" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        </a>
+        <a href="https://calendly.com/addymade/15-minute-consultation-call" class="nav-cta">Book a Call</a>
+        <button class="mob-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- S1: HERO -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <div class="badge-dot"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        AI Videos &amp; Creatives
+      </div>
+      <h1>Videos That <span class="grad">Stop the Scroll.</span><br>Built With AI.</h1>
+      <p class="hero-sub">
+        Professional brand films, product ads, UGC-style content, and 2D animations
+        created with AI &#8212; at 80% less cost than a traditional production
+        company and delivered in 3 to 7 days, not 3 to 6 weeks.
+      </p>
+      <div class="hero-actions">
+        <a href="/contact.html" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Get a Free Video Quote
+        </a>
+        <a href="#how-it-works" class="btn btn-ghost">
+          See How It Works
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>80% less cost than traditional production</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>3&#8211;7 day delivery</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Hindi &amp; regional language voiceover available</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>All formats: vertical, horizontal, square</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- S2: WHAT ARE AI VIDEOS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="what-grid">
+      <div class="what-text">
+        <div class="eyebrow">What Are AI Videos</div>
+        <h2>Professional Video, Without the Production Company Price Tag</h2>
+        <p>
+          AI video production uses advanced generative models to create high-quality
+          visuals, voice, motion graphics, and music &#8212; without a camera crew,
+          a studio, or weeks of post-production. The creative vision is entirely yours;
+          the technical execution is handled by AI.
+        </p>
+        <p>
+          The result is a polished, brand-aligned video that performs on Instagram Reels,
+          YouTube, Meta Ads, and landing pages &#8212; produced at a fraction of the
+          time and cost of traditional filmmaking.
+        </p>
+        <p>
+          We handle every stage: script, voiceover, visuals, motion, music, and
+          platform-optimised delivery. You approve, we refine, and you receive
+          a file ready to publish anywhere.
+        </p>
+      </div>
+      <div class="vt-visual">
+        <p style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:16px">Video formats we produce</p>
+        <div class="vt-grid">
+          <div class="vt-item">
+            <div class="vt-item-icon"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+            <span class="vt-item-text">Brand Promo Films</span>
+          </div>
+          <div class="vt-item">
+            <div class="vt-item-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div>
+            <span class="vt-item-text">Product Demo Videos</span>
+          </div>
+          <div class="vt-item">
+            <div class="vt-item-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <span class="vt-item-text">UGC-Style AI Videos</span>
+          </div>
+          <div class="vt-item">
+            <div class="vt-item-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8l4 4-4 4"/></svg></div>
+            <span class="vt-item-text">2D Animated Explainers</span>
+          </div>
+          <div class="vt-item">
+            <div class="vt-item-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+            <span class="vt-item-text">Social Media Ad Creatives</span>
+          </div>
+          <div class="vt-item">
+            <div class="vt-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+            <span class="vt-item-text">Logo Animations &amp; Intros</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">AI vs Traditional</div>
+      <h2>Why Businesses Are <span class="grad">Switching to AI Video</span></h2>
+      <p>The same professional quality at a fraction of the cost and time &#8212; with more flexibility and faster iteration.</p>
+    </div>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th class="th-label">&nbsp;</th>
+            <th class="th-trad">Traditional Production</th>
+            <th class="th-ai">Adymade AI Video</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-odd">
+            <td class="col-label">Cost per video</td>
+            <td class="col-trad val-bad">&#8377;50,000 &#8211; &#8377;5,00,000</td>
+            <td class="col-ai val-good">&#8377;2,500 &#8211; &#8377;50,000</td>
+          </tr>
+          <tr>
+            <td class="col-label">Turnaround time</td>
+            <td class="col-trad val-bad">3 &#8211; 6 weeks</td>
+            <td class="col-ai val-good">3 &#8211; 7 days</td>
+          </tr>
+          <tr class="row-odd">
+            <td class="col-label">Camera crew required</td>
+            <td class="col-trad"><span class="cross-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></td>
+            <td class="col-ai"><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span><span style="color:var(--success);font-size:13px;font-weight:600;margin-left:4px">Not needed</span></td>
+          </tr>
+          <tr>
+            <td class="col-label">Revisions included</td>
+            <td class="col-trad val-bad">1 &#8211; 2 rounds (expensive)</td>
+            <td class="col-ai val-good">Multiple rounds included</td>
+          </tr>
+          <tr class="row-odd">
+            <td class="col-label">Multiple formats (16:9, 9:16, 1:1)</td>
+            <td class="col-trad val-bad">Extra cost per format</td>
+            <td class="col-ai val-good">All formats included</td>
+          </tr>
+          <tr>
+            <td class="col-label">Regional language voiceover</td>
+            <td class="col-trad val-bad">Additional shoot required</td>
+            <td class="col-ai val-good">Hindi, Marathi &amp; more at no extra cost</td>
+          </tr>
+          <tr class="row-odd">
+            <td class="col-label">Script &amp; creative direction</td>
+            <td class="col-trad"><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span></td>
+            <td class="col-ai"><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- S3: KEY FEATURES -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Key Features</div>
+      <h2>Everything That Makes <span class="grad">AI Video Work</span></h2>
+      <p>From a one-line brief to a publish-ready video &#8212; every element is crafted to match your brand, message, and platform.</p>
+    </div>
+    <div class="features-grid">
+
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <h3>Script &amp; Creative Direction</h3>
+        <p>We write the script, craft the narrative arc, and plan the visual sequence before a single frame is produced. You review and approve before production begins &#8212; no surprises.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+        <h3>AI Voiceover in Any Language</h3>
+        <p>Natural-sounding AI voiceover in English, Hindi, Marathi, Gujarati, and other regional languages. No recording studio, no additional cost, no delay &#8212; in the same delivery window.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+        <h3>Brand-Matched Visuals</h3>
+        <p>Every visual element &#8212; colour palette, typography, motion style, and tone &#8212; is aligned to your brand identity. The video feels like an extension of your brand, not a generic template.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <h3>All Platform Formats</h3>
+        <p>Every video is delivered in all required formats: 16:9 for YouTube, 9:16 for Instagram Reels and Stories, 1:1 for feed posts, and platform-optimised file sizes for Meta Ads.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Fast Turnaround, Every Time</h3>
+        <p>Logo animations in 48 hours. Social ads in 3 days. Full brand films in 5 to 7 days. We commit to a timeline upfront and meet it &#8212; because your campaign launch date matters.</p>
+      </div>
+
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Unlimited Revision Rounds</h3>
+        <p>We refine until the video is exactly right. No charge per round, no cap on feedback iterations. We consider the job done only when you are genuinely happy with the result.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- S4: HOW IT WORKS -->
+<section class="section" id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">How It Works</div>
+      <h2>Brief to Published <span class="grad">in 5 Clear Steps</span></h2>
+      <p>A structured, transparent process so you know exactly what is happening at every stage &#8212; and nothing goes live without your approval.</p>
+    </div>
+    <div class="steps-outer">
+      <div class="steps-grid" style="grid-template-columns:1fr">
+        <!-- On mobile: stacked. On desktop: we override below via inline media -->
+        <div style="display:grid;grid-template-columns:1fr" id="stepsInner">
+
+          <div style="display:grid;grid-template-columns:1fr;gap:0" class="steps-grid-inner">
+
+<!-- Step row: responsive grid -->
+<style>
+@media(min-width:768px){
+  .steps-grid-inner{grid-template-columns:repeat(5,1fr) !important}
+  .step-item-v:not(:last-child)::after{content:'';position:absolute;top:52px;right:-1px;width:2px;height:calc(100% - 52px);background:linear-gradient(to bottom,var(--slate),transparent)}
+}
+@media(max-width:767px){.step-item-v{border-bottom:1px solid var(--slate)}.step-item-v:last-child{border-bottom:none}}
+.step-item-v{padding:32px 28px;position:relative}
+</style>
+
+            <div class="step-item-v">
+              <div class="step-num">1</div>
+              <h3>Brief &amp; Scope</h3>
+              <p>You fill a short brief form: your brand, message, target audience, preferred style, and any reference videos. Takes 10 minutes. No meeting required to get started.</p>
+            </div>
+            <div class="step-item-v">
+              <div class="step-num">2</div>
+              <h3>Script &amp; Storyboard</h3>
+              <p>We write the full script and a visual storyboard describing each scene. You review and suggest changes. Nothing moves to production until you sign off on this stage.</p>
+            </div>
+            <div class="step-item-v">
+              <div class="step-num">3</div>
+              <h3>AI Production</h3>
+              <p>Our production pipeline generates visuals, voiceover, motion graphics, sound design, and music &#8212; all in parallel. This stage happens entirely within our team, with no need for your time.</p>
+            </div>
+            <div class="step-item-v">
+              <div class="step-num">4</div>
+              <h3>Review &amp; Refine</h3>
+              <p>You receive a draft within the agreed window. Watch it, leave timestamped feedback, and we refine. We iterate until the video matches your vision &#8212; no revision limit.</p>
+            </div>
+            <div class="step-item-v">
+              <div class="step-num">5</div>
+              <h3>Delivery</h3>
+              <p>Final files delivered via Google Drive or WeTransfer in all required formats: MP4 for publishing, high-resolution exports, platform-specific aspect ratios, and source files on request.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING TEASER -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Starting Prices</div>
+      <h2>Transparent Pricing, <span class="grad">No Hidden Costs</span></h2>
+      <p>Exact pricing depends on duration, complexity, and number of revision rounds. Every project gets a fixed-price quote within 24 hours of your brief.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="price-card">
+        <div class="price-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg></div>
+        <div class="price-title">Logo Animation</div>
+        <div class="price-amount">From &#8377;2,500</div>
+        <div class="price-duration">48-hour delivery</div>
+        <div class="price-desc">Animated logo sting for video intros, YouTube, presentations, and brand use.</div>
+      </div>
+
+      <div class="price-card">
+        <div class="price-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg></div>
+        <div class="price-title">Social Media Ad</div>
+        <div class="price-amount">From &#8377;5,000</div>
+        <div class="price-duration">3-day delivery</div>
+        <div class="price-desc">15 to 30-second vertical video ad for Instagram Reels, Meta Ads, or YouTube Shorts.</div>
+      </div>
+
+      <div class="price-card popular">
+        <div class="popular-badge">Most Popular</div>
+        <div class="price-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <div class="price-title">Brand Promo Video</div>
+        <div class="price-amount">From &#8377;12,000</div>
+        <div class="price-duration">5-7 day delivery</div>
+        <div class="price-desc">60 to 90-second brand film for your homepage, YouTube channel, or sales presentations.</div>
+      </div>
+
+      <div class="price-card">
+        <div class="price-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8l4 4-4 4"/></svg></div>
+        <div class="price-title">Full Promo Package</div>
+        <div class="price-amount">From &#8377;25,000</div>
+        <div class="price-duration">7-10 day delivery</div>
+        <div class="price-desc">Brand video + 2 social cut-downs + logo animation + all format deliverables.</div>
+      </div>
+
+    </div>
+    <p style="text-align:center;margin-top:32px;font-size:14px;color:var(--muted)">All prices exclude GST. Custom scopes quoted within 24 hours.</p>
+  </div>
+</section>
+
+<!-- S5: STATS -->
+<section class="stats-band">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px">
+      <div class="eyebrow" style="margin-bottom:16px">Results That Speak</div>
+      <h2 style="font-size:clamp(26px,3.5vw,42px)">What AI Video <span class="grad">Delivers for Clients</span></h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-number">80%</div>
+        <div class="stat-lbl">Less cost vs traditional production</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">3&#8211;7</div>
+        <div class="stat-lbl">Days average delivery time</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">45%</div>
+        <div class="stat-lbl">Increase in platform visits (City2City campaign)</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">150+</div>
+        <div class="stat-lbl">Videos delivered across industries</div>
+      </div>
+    </div>
+
+    <!-- Case result callout -->
+    <div style="margin-top:56px;background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-md);padding:32px 36px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;max-width:840px;margin-left:auto;margin-right:auto">
+      <div>
+        <div style="font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--cyan);margin-bottom:8px">Client Result &#8212; City 2 City Moving</div>
+        <p style="font-size:16px;color:var(--white-90);line-height:1.6">
+          An AI-produced brand promotional video for City 2 City Moving resulted in a 45% increase in
+          platform visits during the campaign period, with audience feedback described as
+          "refreshing" and distinctly different from competitor content.
+        </p>
+      </div>
+      <a href="/case-studies/city2city" style="flex-shrink:0;display:inline-flex;align-items:center;gap:8px;padding:12px 20px;background:rgba(90,20,240,.15);border:1px solid rgba(90,20,240,.35);border-radius:var(--radius-sm);font-size:13px;font-weight:600;color:var(--lavender);white-space:nowrap;transition:all .2s">
+        Read Case Study
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- S6: FAQ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Frequently Asked</div>
+      <h2>Questions About <span class="grad">AI Video Production</span></h2>
+    </div>
+    <div class="faq-wrap">
+
+      <div class="faq-item open">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          <span>Will the video look AI-generated or low quality?</span>
+          <span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-body">
+          <div class="faq-inner">
+            No. The generation of AI video has advanced significantly beyond the obvious, glitchy aesthetic
+            of early tools. Our production pipeline uses a combination of leading generative models,
+            professional motion graphics, licensed music, and human creative direction &#8212; the result is
+            indistinguishable from polished agency work. We always share a sample or two from our
+            portfolio before you commit, so you can judge the quality yourself.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          <span>What file formats do you deliver, and which platforms are supported?</span>
+          <span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-body">
+          <div class="faq-inner">
+            We deliver in MP4 (H.264) as standard, which works on every platform. For every project, we
+            include all required aspect ratios at no extra charge: 16:9 (YouTube, website), 9:16 (Instagram
+            Reels, Stories, TikTok, YouTube Shorts), and 1:1 (Instagram feed, Facebook). We also provide
+            MOV for professional use and can export platform-specific compressed files for Meta Ads
+            Manager. Source project files are available on request.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)">
+          <span>Do you provide the script or do I need to supply one?</span>
+          <span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-body">
+          <div class="faq-inner">
+            We write the script for you as part of every project. You provide a brief &#8212; your brand,
+            the message you want to communicate, the audience, and any tone or style preferences.
+            We write the script, share it for your approval, and only proceed to production once you are
+            happy with it. If you already have a script you love, we are equally happy to work from that
+            directly. Either way, the creative direction remains yours.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="page-cta">
+  <div class="container">
+    <div class="page-cta-inner">
+      <h2>Ready to Create Video Content<br>That Actually Converts?</h2>
+      <p>Tell us what you need, and we will send a fixed-price quote within 24 hours &#8212; no commitment required.</p>
+      <div class="cta-btns">
+        <a href="/contact.html" class="cta-btn-w">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Get a Free Video Quote
+        </a>
+        <a href="https://wa.link/u03r6i" class="cta-btn-g">
+          <svg viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          WhatsApp us directly
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="foot-brand">
+        <div class="logo-wrap"><div class="logo-icon">A</div><span class="logo-text">adymade</span></div>
+        <p>A global AI and digital agency based in Indore, India. Serving clients across India, Saudi Arabia, UAE, UK, Australia, and beyond.</p>
+        <div class="socials">
+          <a href="#" class="soc" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="#" class="soc" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          <a href="#" class="soc" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="https://wa.link/u03r6i" class="soc" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="/ai-automation.html">AI Automation</a></li>
+          <li><a href="/ai-videos.html">AI Videos</a></li>
+          <li><a href="/compliance-videos.html">Compliance Videos</a></li>
+          <li><a href="/web-development.html">Web Development</a></li>
+          <li><a href="/software-development.html">Custom Software</a></li>
+          <li><a href="/digital-marketing.html">Digital Marketing</a></li>
+          <li><a href="/geo.html">GEO Services</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Industries</h5>
+        <ul>
+          <li><a href="/industries/construction">Construction</a></li>
+          <li><a href="/industries/healthcare">Healthcare</a></li>
+          <li><a href="/industries/saas">SaaS &amp; Tech</a></li>
+          <li><a href="/industries/manufacturing">Manufacturing</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/about.html">About Us</a></li>
+          <li><a href="/case-studies.html">Case Studies</a></li>
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:contact@adymade.com">contact@adymade.com</a></li>
+          <li><a href="https://wa.link/u03r6i">WhatsApp us</a></li>
+          <li><a href="https://calendly.com/addymade/15-minute-consultation-call">Book a free call</a></li>
+          <li><span style="color:var(--muted)">Indore, M.P., India</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>&#169; 2025 Adymade Digital LLP. All rights reserved. Made with care in Indore &#127470;&#127475;</p>
+      <div class="foot-legal"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY WHATSAPP -->
+<a href="https://wa.link/u03r6i" class="wa-float" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<script>
+function toggleFaq(btn){
+  var item=btn.closest('.faq-item');
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(el){el.classList.remove('open')});
+  if(!isOpen)item.classList.add('open');
+}
+</script>
+</body>
+</html>

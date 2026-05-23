@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<title>Custom Software Development | Adymade — CRMs, Dashboards, Portals, SaaS Tools</title>
+<meta name="description" content="Adymade builds bespoke software — CRMs, admin dashboards, client portals, SaaS tools, and scaffold management systems for businesses across India, GCC, UK, and Australia. Enterprise-grade. Indian prices.">
+<meta name="keywords" content="custom software development India, bespoke software Indore, CRM development India, scaffold management software GCC, SaaS development India, web app development, client portal development India">
+<style>
+:root{--abyss:#08051A;--deep-space:#0D0920;--midnight:#1A1440;--navy:#251C55;--slate:#362870;--royal:#320082;--imperial:#4A00C0;--electric:#5A14F0;--vivid:#7C3AED;--lavender:#A78BFA;--pale:#C4B5FD;--cyan:#06B6D4;--white:#FFFFFF;--white-90:rgba(255,255,255,0.9);--body-text:#7766AA;--muted:#4A3870;--success:#10B981;--warning:#F59E0B;--max-w:1280px;--radius-sm:8px;--radius-md:14px;--radius-lg:22px;--radius-pill:999px;--font:'Plus Jakarta Sans',system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--abyss);color:var(--white-90);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:var(--font);cursor:pointer}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 20px}
+@media(min-width:768px){.container{padding:0 48px}}
+h1,h2,h3,h4{line-height:1.15;letter-spacing:-.02em;color:var(--white);font-weight:800}
+h1{font-size:clamp(36px,5vw,68px)}
+h2{font-size:clamp(28px,4vw,48px);font-weight:700}
+h3{font-size:clamp(17px,2.5vw,22px);font-weight:600}
+.grad{background:linear-gradient(120deg,var(--electric) 0%,var(--cyan) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--lavender);padding:6px 16px;background:rgba(90,20,240,.12);border:1px solid rgba(167,139,250,.2);border-radius:var(--radius-pill);margin-bottom:20px}
+.eyebrow::before{content:'';width:6px;height:6px;background:var(--cyan);border-radius:50%}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;font-size:15px;font-weight:600;border-radius:var(--radius-sm);border:none;transition:all .22s ease;white-space:nowrap;cursor:pointer}
+.btn-primary{background:var(--electric);color:var(--white)}
+.btn-primary:hover{background:var(--imperial);box-shadow:0 8px 28px -6px rgba(90,20,240,.7);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--lavender);border:1.5px solid var(--slate)}
+.btn-ghost:hover{border-color:var(--electric);color:var(--pale);background:rgba(90,20,240,.08)}
+header{position:fixed;inset:0 0 auto 0;z-index:200;background:rgba(8,5,26,.85);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(54,40,112,.5)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.logo-wrap{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.logo-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--royal) 0%,var(--electric) 60%,var(--cyan) 100%);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:white;flex-shrink:0}
+.logo-text{font-size:22px;font-weight:800;color:var(--white);letter-spacing:-.03em}
+.nav-links{display:none;align-items:center;gap:8px;list-style:none;flex:1;justify-content:center}
+@media(min-width:1024px){.nav-links{display:flex}}
+.nav-links>li{position:relative}
+.nav-links a{display:flex;align-items:center;gap:4px;padding:8px 14px;font-size:14px;font-weight:500;color:var(--body-text);border-radius:var(--radius-sm);transition:all .18s}
+.nav-links a:hover{color:var(--white);background:rgba(90,20,240,.1)}
+.chev{font-size:10px;transition:transform .2s}
+.nav-links li:hover .chev{transform:rotate(180deg)}
+.dropdown{position:absolute;top:calc(100% + 10px);left:50%;min-width:680px;background:var(--deep-space);border:1px solid var(--slate);border-radius:var(--radius-md);padding:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;opacity:0;visibility:hidden;transform:translateX(-50%) translateY(8px);transition:all .2s;box-shadow:0 32px 64px -16px rgba(0,0,0,.8)}
+.nav-links li:hover .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.dropdown-sm{min-width:420px;grid-template-columns:1fr 1fr}
+.dd-col h5{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--cyan);margin-bottom:14px}
+.dd-col ul{list-style:none}
+.dd-col li{margin-bottom:10px;position:static}
+.dd-col a{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--body-text);padding:6px 8px;border-radius:6px;font-weight:500}
+.dd-col a:hover{color:var(--white);background:rgba(90,20,240,.12)}
+.dd-icon{width:30px;height:30px;border-radius:7px;background:rgba(90,20,240,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dd-icon svg{width:16px;height:16px}
+.nav-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.wa-nav{width:40px;height:40px;background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.wa-nav:hover{background:#25D366}
+.wa-nav svg{width:20px;height:20px;fill:#25D366}
+.wa-nav:hover svg{fill:white}
+.nav-cta{padding:10px 22px;background:var(--electric);color:white;border-radius:var(--radius-sm);font-size:14px;font-weight:600;transition:all .2s;border:none}
+.nav-cta:hover{background:var(--imperial);box-shadow:0 6px 20px -4px rgba(90,20,240,.6)}
+.mob-menu-btn{display:flex;flex-direction:column;gap:5px;background:none;border:none;padding:8px}
+.mob-menu-btn span{width:22px;height:2px;background:var(--white);border-radius:2px}
+@media(min-width:1024px){.mob-menu-btn{display:none}}
+.section{padding:110px 0}
+@media(max-width:768px){.section{padding:72px 0}}
+.section-alt{background:var(--deep-space)}
+.section-header{text-align:center;max-width:780px;margin:0 auto 64px}
+.section-header h2{margin-bottom:18px}
+.section-header p{font-size:18px;color:var(--body-text);line-height:1.65}
+.hero{min-height:100vh;display:flex;align-items:center;padding:140px 0 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-15%;right:-10%;width:700px;height:700px;background:radial-gradient(circle,rgba(90,20,240,.18) 0%,transparent 65%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-10%;left:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(6,182,212,.07) 0%,transparent 65%);pointer-events:none}
+.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(54,40,112,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(54,40,112,.13) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 80%)}
+.hero-inner{position:relative;z-index:1;max-width:840px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 8px;background:rgba(90,20,240,.1);border:1px solid rgba(167,139,250,.2);border-radius:var(--radius-pill);font-size:12px;color:var(--lavender);margin-bottom:28px;font-weight:500}
+.badge-dot{width:22px;height:22px;background:linear-gradient(135deg,var(--royal),var(--electric));border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.badge-dot svg{width:12px;height:12px;fill:none;stroke:white;stroke-width:2.5}
+.hero h1{margin-bottom:24px}
+.hero-sub{font-size:19px;color:var(--body-text);max-width:640px;line-height:1.7;margin-bottom:40px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:48px}
+.hero-trust{display:flex;flex-wrap:wrap;gap:24px}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.trust-item svg{width:16px;height:16px;stroke:var(--cyan);fill:none;stroke-width:2.5;flex-shrink:0}
+.what-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+@media(min-width:900px){.what-grid{grid-template-columns:1fr 1fr}}
+.what-text h2{margin-bottom:20px}
+.what-text p{font-size:16px;color:var(--body-text);line-height:1.75;margin-bottom:16px}
+.what-visual{background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-lg);padding:32px;position:relative;overflow:hidden}
+.what-visual::before{content:'';position:absolute;top:-30px;right:-30px;width:200px;height:200px;background:radial-gradient(circle,rgba(90,20,240,.15),transparent 70%)}
+.build-item{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid var(--slate);position:relative;z-index:1}
+.build-item:last-child{border-bottom:none}
+.build-icon{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,rgba(50,0,130,.6),rgba(90,20,240,.4));border:1px solid rgba(90,20,240,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.build-icon svg{width:18px;height:18px;stroke:var(--lavender);fill:none;stroke-width:1.8}
+.build-title{font-size:14px;font-weight:700;color:var(--white);margin-bottom:3px}
+.build-desc{font-size:13px;color:var(--body-text);line-height:1.5}
+.features-grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:560px){.features-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.features-grid{grid-template-columns:repeat(3,1fr)}}
+.feat-card{background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-md);padding:32px 28px;transition:all .28s;position:relative;overflow:hidden}
+.feat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--electric),var(--cyan));opacity:0;transition:opacity .28s}
+.feat-card::after{content:'';position:absolute;bottom:-50px;right:-50px;width:140px;height:140px;background:radial-gradient(circle,rgba(90,20,240,.1) 0%,transparent 70%);transition:all .4s}
+.feat-card:hover{border-color:rgba(90,20,240,.55);transform:translateY(-6px);box-shadow:0 20px 40px -16px rgba(90,20,240,.22)}
+.feat-card:hover::before{opacity:1}
+.feat-card:hover::after{bottom:-20px;right:-20px}
+.feat-icon{width:52px;height:52px;border-radius:13px;background:linear-gradient(135deg,rgba(50,0,130,.6),rgba(90,20,240,.4));border:1px solid rgba(90,20,240,.3);display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:all .28s}
+.feat-icon svg{width:26px;height:26px;stroke:var(--lavender);fill:none;stroke-width:1.8}
+.feat-card:hover .feat-icon{background:linear-gradient(135deg,var(--royal),var(--electric));border-color:transparent}
+.feat-card:hover .feat-icon svg{stroke:white}
+.feat-card h3{font-size:18px;margin-bottom:10px}
+.feat-card p{font-size:14px;color:var(--body-text);line-height:1.65}
+.steps-outer{background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-lg);overflow:hidden}
+.steps-grid{display:grid;grid-template-columns:1fr}
+@media(min-width:768px){.steps-grid{grid-template-columns:repeat(5,1fr)}}
+.step-item{padding:32px 24px;position:relative}
+@media(min-width:768px){.step-item:not(:last-child)::after{content:'';position:absolute;top:52px;right:-1px;width:2px;height:calc(100% - 52px);background:linear-gradient(to bottom,var(--slate),transparent)}}
+@media(max-width:767px){.step-item{border-bottom:1px solid var(--slate)}.step-item:last-child{border-bottom:none}}
+.step-num{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--royal),var(--electric));display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:white;margin-bottom:20px;box-shadow:0 0 0 6px rgba(90,20,240,.12)}
+.step-item h3{font-size:16px;margin-bottom:8px}
+.step-item p{font-size:13px;color:var(--body-text);line-height:1.6}
+.tech-section{}
+.tech-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px;justify-content:center}
+.tech-tab{padding:9px 20px;border-radius:var(--radius-pill);font-size:13px;font-weight:600;border:1px solid var(--slate);color:var(--body-text);background:transparent;cursor:pointer;transition:all .2s}
+.tech-tab.active,.tech-tab:hover{background:var(--electric);border-color:var(--electric);color:white}
+.tech-panel{display:none}
+.tech-panel.active{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(min-width:640px){.tech-panel.active{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:900px){.tech-panel.active{grid-template-columns:repeat(5,1fr)}}
+.tech-chip{display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px 16px;background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-md);text-align:center;transition:all .22s}
+.tech-chip:hover{border-color:rgba(90,20,240,.5);transform:translateY(-3px)}
+.tech-chip-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(50,0,130,.5),rgba(90,20,240,.35));border:1px solid rgba(90,20,240,.25)}
+.tech-chip-icon svg{width:22px;height:22px;stroke:var(--lavender);fill:none;stroke-width:1.8}
+.tech-chip-name{font-size:13px;font-weight:600;color:var(--white-90)}
+.tech-chip-type{font-size:11px;color:var(--muted)}
+.pricing-row{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:560px){.pricing-row{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.pricing-row{grid-template-columns:repeat(4,1fr)}}
+.price-card{background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-md);padding:24px;position:relative;overflow:hidden;transition:all .25s}
+.price-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--electric),var(--cyan));opacity:0;transition:opacity .3s}
+.price-card:hover{border-color:rgba(90,20,240,.45);transform:translateY(-4px)}
+.price-card:hover::before{opacity:1}
+.price-card.popular{border-color:rgba(6,182,212,.35)}
+.price-card.popular::before{opacity:1;background:linear-gradient(90deg,var(--cyan),var(--electric))}
+.pop-badge{position:absolute;top:12px;right:12px;padding:3px 10px;background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);border-radius:var(--radius-pill);font-size:10px;font-weight:700;color:var(--cyan);letter-spacing:.05em;text-transform:uppercase}
+.price-title{font-size:15px;font-weight:700;color:var(--white);margin-bottom:6px}
+.price-amount{font-size:22px;font-weight:800;color:var(--cyan);margin-bottom:4px}
+.price-sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+.price-desc{font-size:13px;color:var(--body-text);line-height:1.55}
+.faq-wrap{max-width:760px;margin:0 auto}
+.faq-item{background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-md);margin-bottom:10px;overflow:hidden;transition:border-color .2s}
+.faq-item.open{border-color:rgba(90,20,240,.5)}
+.faq-btn{width:100%;padding:22px 24px;background:transparent;border:none;color:var(--white);font-size:16px;font-weight:600;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:var(--font);cursor:pointer}
+.faq-toggle{width:28px;height:28px;border-radius:50%;background:rgba(90,20,240,.15);border:1px solid var(--slate);display:flex;align-items:center;justify-content:center;color:var(--lavender);flex-shrink:0;transition:all .2s}
+.faq-toggle svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.5;transition:transform .2s}
+.faq-item.open .faq-toggle{background:var(--electric);border-color:var(--electric);color:white}
+.faq-item.open .faq-toggle svg{transform:rotate(45deg)}
+.faq-body{max-height:0;overflow:hidden;transition:max-height .32s ease}
+.faq-item.open .faq-body{max-height:400px}
+.faq-inner{padding:0 24px 24px;font-size:15px;color:var(--body-text);line-height:1.75}
+.page-cta{background:linear-gradient(135deg,#030110 0%,#1A0060 30%,var(--royal) 58%,#4A10C8 82%,#6020A8 100%);position:relative;overflow:hidden}
+.page-cta::before{content:'';position:absolute;top:-40%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(6,182,212,.1) 0%,transparent 60%)}
+.page-cta::after{content:'';position:absolute;bottom:-30%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(10,0,50,.6) 0%,transparent 60%)}
+.page-cta-inner{position:relative;z-index:1;text-align:center;padding:100px 0}
+.page-cta-inner h2{color:white;margin-bottom:20px}
+.page-cta-inner>p{font-size:19px;color:rgba(255,255,255,.8);margin-bottom:40px;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.65}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-btn-w{padding:16px 32px;background:white;color:var(--electric);border-radius:var(--radius-sm);font-size:16px;font-weight:700;border:none;transition:all .22s;display:flex;align-items:center;gap:8px;cursor:pointer}
+.cta-btn-w:hover{background:var(--abyss);color:white;transform:translateY(-2px)}
+.cta-btn-g{padding:16px 32px;background:transparent;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.25);border-radius:var(--radius-sm);font-size:16px;font-weight:600;transition:all .22s;display:flex;align-items:center;gap:8px;cursor:pointer}
+.cta-btn-g:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.08);color:white}
+footer{background:var(--abyss);border-top:1px solid var(--slate);padding:80px 0 36px}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:40px;margin-bottom:56px}
+@media(min-width:560px){.footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.footer-grid{grid-template-columns:1.6fr repeat(4,1fr)}}
+.foot-brand p{font-size:14px;color:var(--body-text);margin:16px 0 24px;max-width:300px;line-height:1.65}
+.socials{display:flex;gap:10px}
+.soc{width:38px;height:38px;background:var(--midnight);border:1px solid var(--slate);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--body-text);transition:all .2s;text-decoration:none}
+.soc:hover{border-color:var(--electric);color:var(--lavender);transform:translateY(-2px)}
+.soc svg{width:17px;height:17px;fill:currentColor}
+.foot-col h5{font-size:13px;font-weight:600;color:var(--white);margin-bottom:18px;letter-spacing:.02em}
+.foot-col ul{list-style:none}
+.foot-col li{margin-bottom:12px}
+.foot-col a{font-size:13px;color:var(--body-text);transition:color .2s}
+.foot-col a:hover{color:var(--lavender)}
+.foot-bottom{padding-top:28px;border-top:1px solid var(--slate);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
+.foot-bottom p{font-size:13px;color:var(--muted)}
+.foot-legal{display:flex;gap:24px}
+.foot-legal a{font-size:13px;color:var(--muted);transition:color .2s}
+.foot-legal a:hover{color:var(--lavender)}
+.wa-float{position:fixed;bottom:28px;right:28px;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:300;box-shadow:0 8px 24px rgba(37,211,102,.35);transition:all .22s;text-decoration:none;animation:waPulse 2.8s infinite}
+@keyframes waPulse{0%{box-shadow:0 8px 24px rgba(37,211,102,.35),0 0 0 0 rgba(37,211,102,.4)}70%{box-shadow:0 8px 24px rgba(37,211,102,.35),0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 8px 24px rgba(37,211,102,.35),0 0 0 0 rgba(37,211,102,0)}}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:30px;height:30px;fill:white}
+</style>
+/* SOFTWARE-SPECIFIC STYLES */
+<style>
+.software-grid{display:grid;grid-template-columns:1fr;gap:22px}
+@media(min-width:640px){.software-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.software-grid{grid-template-columns:repeat(3,1fr)}}
+.sw-card{background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-md);padding:28px;display:flex;flex-direction:column;gap:14px;transition:all .28s;position:relative;overflow:hidden}
+.sw-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--electric),var(--cyan));opacity:0;transition:opacity .3s}
+.sw-card:hover{border-color:rgba(90,20,240,.5);transform:translateY(-5px);box-shadow:0 20px 40px -16px rgba(90,20,240,.2)}
+.sw-card:hover::before{opacity:1}
+.sw-card-icon{width:52px;height:52px;border-radius:13px;background:linear-gradient(135deg,rgba(50,0,130,.6),rgba(90,20,240,.4));border:1px solid rgba(90,20,240,.3);display:flex;align-items:center;justify-content:center;transition:all .28s}
+.sw-card-icon svg{width:26px;height:26px;stroke:var(--lavender);fill:none;stroke-width:1.8}
+.sw-card:hover .sw-card-icon{background:linear-gradient(135deg,var(--royal),var(--electric));border-color:transparent}
+.sw-card:hover .sw-card-icon svg{stroke:white}
+.sw-card h3{font-size:18px;font-weight:700;color:var(--white)}
+.sw-card p{font-size:14px;color:var(--body-text);line-height:1.6}
+.sw-card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.sw-tag{font-size:11px;padding:3px 10px;background:rgba(90,20,240,.1);border:1px solid rgba(167,139,250,.2);border-radius:var(--radius-pill);color:var(--lavender);font-weight:500}
+.vs-row{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:768px){.vs-row{grid-template-columns:1fr 1fr}}
+.vs-card{background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-md);padding:28px}
+.vs-card.active{border-color:rgba(90,20,240,.4);background:linear-gradient(135deg,var(--midnight),rgba(90,20,240,.05))}
+.vs-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+.vs-label.old{color:var(--muted)}
+.vs-label.good{color:var(--cyan)}
+.vs-card h3{font-size:18px;margin-bottom:16px}
+.vs-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body-text);margin-bottom:10px;line-height:1.5}
+.vs-item svg{width:16px;height:16px;flex-shrink:0;margin-top:2px}
+.vs-pos svg{stroke:var(--success);fill:none;stroke-width:2.5}
+.vs-neg svg{stroke:var(--muted);fill:none;stroke-width:2.5}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="/" class="logo-wrap"><div class="logo-icon">A</div><span class="logo-text">adymade</span></a>
+      <ul class="nav-links">
+        <li>
+          <a href="#">Services <span class="chev">&#9662;</span></a>
+          <div class="dropdown">
+            <div class="dd-col"><h5>AI &amp; Automation</h5><ul>
+              <li><a href="/ai-automation.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2"/></svg></span>AI Automation &amp; Agents</a></li>
+              <li><a href="/ai-videos.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></span>AI Videos &amp; Creatives</a></li>
+              <li><a href="/compliance-videos.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Compliance Videos</a></li>
+              <li><a href="/geo.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg></span>GEO &#8212; AI Search Ranking</a></li>
+            </ul></div>
+            <div class="dd-col"><h5>Development</h5><ul>
+              <li><a href="/web-development.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>Web &amp; App Development</a></li>
+              <li><a href="/software-development.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>Custom Software</a></li>
+            </ul>
+            <h5 style="margin-top:20px">Marketing</h5><ul>
+              <li><a href="/digital-marketing.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>Digital Marketing</a></li>
+              <li><a href="/digital-marketing#seo"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>SEO Services</a></li>
+            </ul></div>
+            <div class="dd-col" style="background:rgba(90,20,240,.06);border-radius:10px;padding:16px">
+              <h5>GCC Expertise</h5>
+              <div style="margin-bottom:12px"><div style="font-size:13px;color:var(--lavender);font-weight:600;margin-bottom:4px">&#127480;&#127462; RGS &#8212; Tamimi Group</div><div style="font-size:12px;color:var(--body-text);line-height:1.5">Website built for a Tamimi Group scaffolding company in Saudi Arabia</div></div>
+              <a href="/case-studies/rgs-saudi-arabia" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--cyan)">View case study &#8594;</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">Industries <span class="chev">&#9662;</span></a>
+          <div class="dropdown dropdown-sm">
+            <div class="dd-col"><h5>By Industry</h5><ul>
+              <li><a href="/industries/construction"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>Construction &amp; Scaffolding</a></li>
+              <li><a href="/industries/healthcare"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>Healthcare &amp; Clinics</a></li>
+            </ul></div>
+            <div class="dd-col"><h5>&nbsp;</h5><ul>
+              <li><a href="/industries/saas"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg></span>SaaS &amp; Tech</a></li>
+              <li><a href="/industries/manufacturing"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 0 0 2 12h2"/></svg></span>Manufacturing</a></li>
+            </ul></div>
+          </div>
+        </li>
+        <li><a href="/case-studies.html">Our Work</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://wa.link/u03r6i" class="wa-nav" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+        <a href="https://calendly.com/addymade/15-minute-consultation-call" class="nav-cta">Book a Call</a>
+        <button class="mob-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <div class="badge-dot"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        Custom Software Development
+      </div>
+      <h1>Software Built for<br><span class="grad">Your Business Exactly.</span></h1>
+      <p class="hero-sub">Bespoke dashboards, CRMs, client portals, SaaS tools, and management systems &#8212; built to your exact specification. No compromises, no bloated off-the-shelf subscriptions, no paying for features you will never use. Enterprise-grade quality at Indian prices.</p>
+      <div class="hero-actions">
+        <a href="/contact.html" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Discuss Your Project
+        </a>
+        <a href="#what-we-build" class="btn btn-ghost">
+          See What We Build
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>You own the code outright &#8212; no vendor lock-in</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>GCC industry-specific (scaffold management, project tracking)</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Built to integrate with your existing tools</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Ongoing maintenance available</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS CUSTOM SOFTWARE -->
+<section class="section section-alt">
+  <div class="container">
+    <div style="max-width:840px;margin:0 auto 56px">
+      <div class="eyebrow">What Is Custom Software</div>
+      <h2 style="margin-bottom:20px">When Off-the-Shelf Stops <span class="grad">Being Enough</span></h2>
+      <p style="font-size:16px;color:var(--body-text);line-height:1.75;margin-bottom:16px">Off-the-shelf software (Zoho, Salesforce, Monday.com, etc.) is built for the average business. The moment your processes become specific &#8212; your field names, your workflows, your approval chains, your reports &#8212; you start fighting the software instead of using it. You pay for features you do not need, and miss features you desperately do.</p>
+      <p style="font-size:16px;color:var(--body-text);line-height:1.75;margin-bottom:16px">Custom software is built exactly for your business. Every field, every screen, every permission level, every report is designed around how you actually work &#8212; not a generic template. The result is a system your team actually uses, because it fits how they think.</p>
+      <p style="font-size:16px;color:var(--body-text);line-height:1.75">We build custom software for construction companies needing scaffold tracking, healthcare providers needing patient management, SaaS startups needing their core product, and enterprises needing internal tools that no off-the-shelf product covers.</p>
+    </div>
+
+    <div class="vs-row">
+      <div class="vs-card">
+        <div class="vs-label old">Off-the-shelf software</div>
+        <h3>Built for Everyone</h3>
+        <div class="vs-item vs-neg"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></svg>Designed for the average business, not yours</div>
+        <div class="vs-item vs-neg"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></svg>Monthly subscription fees that never stop</div>
+        <div class="vs-item vs-neg"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></svg>Vendor controls features, pricing, and data</div>
+        <div class="vs-item vs-neg"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></svg>You adapt your process to the software</div>
+        <div class="vs-item vs-neg"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></svg>Migration risk if vendor changes or closes</div>
+      </div>
+      <div class="vs-card active">
+        <div class="vs-label good">Custom software by Adymade</div>
+        <h3>Built for You</h3>
+        <div class="vs-item vs-pos"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Designed around your exact business processes</div>
+        <div class="vs-item vs-pos"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>One-time build cost &#8212; you own it outright</div>
+        <div class="vs-item vs-pos"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Full control over features, data, and hosting</div>
+        <div class="vs-item vs-pos"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Software adapts to your process, not vice versa</div>
+        <div class="vs-item vs-pos"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Source code delivered &#8212; no vendor dependency</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY FEATURES -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Key Features</div>
+      <h2>What Every Custom Build <span class="grad">Comes With</span></h2>
+      <p>Standards we hold ourselves to on every project &#8212; whether it is a simple internal tool or a multi-tenant SaaS product.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Role-Based Access Control</h3>
+        <p>Every user sees exactly what they need &#8212; nothing more. Admin, manager, field staff, client &#8212; separate dashboards, separate data access, separate permissions. Built in from the start, not bolted on later.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>Clean Admin Dashboard</h3>
+        <p>Every system includes an admin panel for managing data, users, settings, and reports. Designed for non-technical users &#8212; if your operations manager cannot use it without training, we have not done our job.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+        <h3>Third-Party Integrations</h3>
+        <p>Connect to your existing stack: accounting software, payment gateways, WhatsApp API, email providers, Google Workspace, Slack, and hundreds of others via REST APIs and webhooks. Your new software talks to everything you already use.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+        <h3>Mobile-Responsive or Native App</h3>
+        <p>Web apps are fully responsive so field staff can use them on-site from any device. For use cases requiring offline capability or device access (camera, GPS), we build mobile-first PWAs or native mobile applications.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3>Custom Reporting &amp; Exports</h3>
+        <p>Reports built around your business metrics &#8212; not whatever generic charts the software vendor decided to include. Daily summaries, weekly dashboards, PDF exports, and CSV downloads configured exactly as your team needs them.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Scalable Architecture</h3>
+        <p>Built to handle 10 users today and 10,000 tomorrow without a rewrite. We architect for growth from day one &#8212; proper database design, caching, background job processing, and horizontal scalability when you need it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section-alt" id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">How It Works</div>
+      <h2>From Idea to <span class="grad">Production-Ready Software</span></h2>
+      <p>A structured development process that keeps you informed and in control at every stage &#8212; with no technical surprises.</p>
+    </div>
+    <div class="steps-outer">
+      <div class="steps-grid">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <h3>Requirements &amp; Scoping</h3>
+          <p>We document every screen, user type, workflow, and integration. We challenge vague requirements and surface edge cases before they become expensive bugs. You receive a scope document and fixed-price proposal.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <h3>Architecture &amp; Design</h3>
+          <p>We design the database schema, API structure, and user interface wireframes. You approve the architecture before development begins &#8212; changing direction at this stage costs time, not money.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <h3>Agile Development</h3>
+          <p>We build in two-week sprints. At the end of each sprint, you review working features on a staging environment. Feedback is incorporated into the next sprint &#8212; you see progress continuously, not just at the end.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <h3>QA &amp; Testing</h3>
+          <p>Every feature is tested against the original requirements, cross-browser, and on mobile before release. We run performance and security testing before launch. No half-finished features reach production.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <h3>Deploy &amp; Maintain</h3>
+          <p>We deploy to your preferred hosting (AWS, Azure, GCP, or a managed VPS). Full source code, documentation, and environment setup delivered. Post-launch maintenance retainer available for ongoing updates and support.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE BUILD -->
+<section class="section" id="what-we-build">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Products We Build</div>
+      <h2>Six Types of Software <span class="grad">We Build Regularly</span></h2>
+      <p>These are the categories we have the most depth in &#8212; but any well-scoped software project is within our capability.</p>
+    </div>
+    <div class="software-grid">
+
+      <div class="sw-card">
+        <div class="sw-card-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>CRM Systems</h3>
+        <p>Custom customer relationship management built around your sales process &#8212; your pipeline stages, your fields, your automations, your reports. No paying for features built for a Fortune 500 sales team you will never use.</p>
+        <div class="sw-card-tags"><span class="sw-tag">Lead management</span><span class="sw-tag">Pipeline tracking</span><span class="sw-tag">Follow-up automation</span></div>
+      </div>
+
+      <div class="sw-card">
+        <div class="sw-card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>Admin Dashboards</h3>
+        <p>Centralised control panels for managing your operations &#8212; bookings, inventory, staff, orders, or any combination. Built with real-time data, search, filters, and export capabilities your ops team will actually use daily.</p>
+        <div class="sw-card-tags"><span class="sw-tag">Real-time data</span><span class="sw-tag">Role permissions</span><span class="sw-tag">Export to PDF/CSV</span></div>
+      </div>
+
+      <div class="sw-card">
+        <div class="sw-card-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3>Client Portals</h3>
+        <p>Secure logins for your clients to track their projects, approve deliverables, view invoices, raise support tickets, and communicate &#8212; without endless email chains. White-labelled with your branding.</p>
+        <div class="sw-card-tags"><span class="sw-tag">Secure login</span><span class="sw-tag">Project tracking</span><span class="sw-tag">Document sharing</span></div>
+      </div>
+
+      <div class="sw-card">
+        <div class="sw-card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 17V7h10M7 12h6"/></svg></div>
+        <h3>SaaS Tools</h3>
+        <p>The core product engine behind your SaaS business &#8212; multi-tenant architecture, subscription billing, feature gating, onboarding flows, and usage analytics. We have built B2B SaaS tools from MVP to production scale.</p>
+        <div class="sw-card-tags"><span class="sw-tag">Multi-tenant</span><span class="sw-tag">Billing integration</span><span class="sw-tag">Usage analytics</span></div>
+      </div>
+
+      <div class="sw-card" style="border-color:rgba(90,20,240,.3)">
+        <div class="sw-card-icon" style="background:linear-gradient(135deg,var(--royal),var(--electric));border-color:transparent"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3 style="color:var(--lavender)">Scaffold Management Software</h3>
+        <p>Our GCC specialist product &#8212; custom scaffold tracking systems for construction companies. Equipment inventory, site assignments, billing per cubic metre/day, inspection records, and client-facing reports.</p>
+        <div class="sw-card-tags" style=""><span class="sw-tag" style="background:rgba(6,182,212,.1);border-color:rgba(6,182,212,.25);color:var(--cyan)">Equipment tracking</span><span class="sw-tag" style="background:rgba(6,182,212,.1);border-color:rgba(6,182,212,.25);color:var(--cyan)">GCC specialist</span><span class="sw-tag" style="background:rgba(6,182,212,.1);border-color:rgba(6,182,212,.25);color:var(--cyan)">Billing &amp; reports</span></div>
+      </div>
+
+      <div class="sw-card">
+        <div class="sw-card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+        <h3>Booking &amp; Scheduling Systems</h3>
+        <p>Custom appointment and resource scheduling for clinics, salons, sports facilities, and services businesses. Real-time availability, automated reminders, and payment collection integrated in one flow.</p>
+        <div class="sw-card-tags"><span class="sw-tag">Real-time booking</span><span class="sw-tag">Reminders</span><span class="sw-tag">Payment integration</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Frequently Asked</div>
+      <h2>Questions About <span class="grad">Custom Software</span></h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item open">
+        <button class="faq-btn" onclick="toggleFaq(this)"><span>How much does custom software development cost?</span><span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-body"><div class="faq-inner">Cost depends entirely on scope &#8212; the number of user types, screens, integrations, and complexity of the logic. A simple internal tool (single user type, 5-10 screens) typically starts from &#8377;75,000. A scaffold management system with equipment tracking, billing, and client portal is typically &#8377;1,50,000 to &#8377;3,00,000. A full SaaS product with multi-tenancy and billing is &#8377;3,00,000 and above. We always provide a fixed-price quote based on a scoped requirements document &#8212; never an estimate that turns into a larger number mid-project.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)"><span>Do I own the code once the project is complete?</span><span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-body"><div class="faq-inner">Yes &#8212; completely. On final payment, we transfer all source code, database schemas, deployment configurations, and documentation to you. You can host it anywhere, modify it with any developer, or extend it yourself. There is no ongoing licence fee, no vendor lock-in, and no dependency on Adymade continuing to exist. This is your software, permanently. We document the codebase thoroughly so any competent developer can work on it in the future, not just our team.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)"><span>Can you integrate the new software with the tools we already use?</span><span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-body"><div class="faq-inner">Yes. If your existing tool has an API &#8212; and virtually all modern business software does &#8212; we can integrate it. We have built integrations with accounting software (Tally, Zoho Books, QuickBooks), payment gateways (Razorpay, Stripe, PayTabs), communication tools (WhatsApp Business API, email providers), Google Workspace, and many industry-specific platforms. We audit your current stack during scoping and map every integration into the project plan before we start building.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="page-cta">
+  <div class="container">
+    <div class="page-cta-inner">
+      <h2>Have Software in Mind That<br>No Off-the-Shelf Product Covers?</h2>
+      <p>Tell us what you need &#8212; we will scope it, price it, and show you a fixed-price proposal within 48 hours. No commitment required.</p>
+      <div class="cta-btns">
+        <a href="/contact.html" class="cta-btn-w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Discuss Your Project</a>
+        <a href="https://wa.link/u03r6i" class="cta-btn-g"><svg viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>WhatsApp us directly</a>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="foot-brand">
+        <div class="logo-wrap"><div class="logo-icon">A</div><span class="logo-text">adymade</span></div>
+        <p>A global AI and digital agency based in Indore, India. Serving clients across India, Saudi Arabia, UAE, UK, Australia, and beyond.</p>
+        <div class="socials">
+          <a href="#" class="soc" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="#" class="soc" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+          <a href="#" class="soc" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="https://wa.link/u03r6i" class="soc" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col"><h5>Services</h5><ul><li><a href="/ai-automation.html">AI Automation</a></li><li><a href="/ai-videos.html">AI Videos</a></li><li><a href="/compliance-videos.html">Compliance Videos</a></li><li><a href="/web-development.html">Web Development</a></li><li><a href="/software-development.html">Custom Software</a></li><li><a href="/digital-marketing.html">Digital Marketing</a></li><li><a href="/geo.html">GEO Services</a></li></ul></div>
+      <div class="foot-col"><h5>Industries</h5><ul><li><a href="/industries/construction">Construction</a></li><li><a href="/industries/healthcare">Healthcare</a></li><li><a href="/industries/saas">SaaS &amp; Tech</a></li><li><a href="/industries/manufacturing">Manufacturing</a></li></ul></div>
+      <div class="foot-col"><h5>Company</h5><ul><li><a href="/about.html">About Us</a></li><li><a href="/case-studies.html">Case Studies</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+      <div class="foot-col"><h5>Contact</h5><ul><li><a href="mailto:contact@adymade.com">contact@adymade.com</a></li><li><a href="https://wa.link/u03r6i">WhatsApp us</a></li><li><a href="https://calendly.com/addymade/15-minute-consultation-call">Book a free call</a></li><li><span style="color:var(--muted)">Indore, M.P., India</span></li></ul></div>
+    </div>
+    <div class="foot-bottom"><p>&#169; 2025 Adymade Digital LLP. All rights reserved. Made with care in Indore &#127470;&#127475;</p><div class="foot-legal"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a></div></div>
+  </div>
+</footer>
+<a href="https://wa.link/u03r6i" class="wa-float" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+<script>function toggleFaq(btn){var item=btn.closest('.faq-item');var isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(el){el.classList.remove('open')});if(!isOpen)item.classList.add('open')}</script>
+</body>
+</html>

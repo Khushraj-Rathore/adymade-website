@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEO — Generative Engine Optimisation | Adymade — Rank in ChatGPT &amp; Perplexity</title>
+<meta name="description" content="Adymade offers GEO (Generative Engine Optimisation) — get your business cited in ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot. First-mover advantage in India. Based in Indore.">
+<meta name="keywords" content="GEO services India, generative engine optimisation India, ChatGPT SEO India, Perplexity optimisation, Google AI Overviews ranking, rank in ChatGPT, AI search ranking India, GEO agency Indore">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--abyss:#08051A;--deep-space:#0D0920;--midnight:#1A1440;--navy:#251C55;--slate:#362870;--royal:#320082;--imperial:#4A00C0;--electric:#5A14F0;--vivid:#7C3AED;--lavender:#A78BFA;--pale:#C4B5FD;--cyan:#06B6D4;--white:#FFFFFF;--white-90:rgba(255,255,255,0.9);--body-text:#7766AA;--muted:#4A3870;--success:#10B981;--warning:#F59E0B;--max-w:1280px;--radius-sm:8px;--radius-md:14px;--radius-lg:22px;--radius-pill:999px;--font:'Plus Jakarta Sans',system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--abyss);color:var(--white-90);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:var(--font);cursor:pointer}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 20px}
+@media(min-width:768px){.container{padding:0 48px}}
+h1,h2,h3,h4{line-height:1.15;letter-spacing:-.02em;color:var(--white);font-weight:800}
+h1{font-size:clamp(36px,5vw,68px)}
+h2{font-size:clamp(28px,4vw,48px);font-weight:700}
+h3{font-size:clamp(17px,2.5vw,22px);font-weight:600}
+.grad{background:linear-gradient(120deg,var(--electric) 0%,var(--cyan) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--lavender);padding:6px 16px;background:rgba(90,20,240,.12);border:1px solid rgba(167,139,250,.2);border-radius:var(--radius-pill);margin-bottom:20px}
+.eyebrow::before{content:'';width:6px;height:6px;background:var(--cyan);border-radius:50%}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;font-size:15px;font-weight:600;border-radius:var(--radius-sm);border:none;transition:all .22s ease;white-space:nowrap;cursor:pointer}
+.btn-primary{background:var(--electric);color:var(--white)}
+.btn-primary:hover{background:var(--imperial);box-shadow:0 8px 28px -6px rgba(90,20,240,.7);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--lavender);border:1.5px solid var(--slate)}
+.btn-ghost:hover{border-color:var(--electric);color:var(--pale);background:rgba(90,20,240,.08)}
+/* HEADER */
+header{position:fixed;inset:0 0 auto 0;z-index:200;background:rgba(8,5,26,.85);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(54,40,112,.5)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.logo-wrap{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.logo-icon{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--royal) 0%,var(--electric) 60%,var(--cyan) 100%);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:white;flex-shrink:0}
+.logo-text{font-size:22px;font-weight:800;color:var(--white);letter-spacing:-.03em}
+.nav-links{display:none;align-items:center;gap:8px;list-style:none;flex:1;justify-content:center}
+@media(min-width:1024px){.nav-links{display:flex}}
+.nav-links>li{position:relative}
+.nav-links a{display:flex;align-items:center;gap:4px;padding:8px 14px;font-size:14px;font-weight:500;color:var(--body-text);border-radius:var(--radius-sm);transition:all .18s}
+.nav-links a:hover{color:var(--white);background:rgba(90,20,240,.1)}
+.chev{font-size:10px;transition:transform .2s}
+.nav-links li:hover .chev{transform:rotate(180deg)}
+.dropdown{position:absolute;top:calc(100% + 10px);left:50%;min-width:680px;background:var(--deep-space);border:1px solid var(--slate);border-radius:var(--radius-md);padding:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;opacity:0;visibility:hidden;transform:translateX(-50%) translateY(8px);transition:all .2s;box-shadow:0 32px 64px -16px rgba(0,0,0,.8)}
+.nav-links li:hover .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.dropdown-sm{min-width:420px;grid-template-columns:1fr 1fr}
+.dd-col h5{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--cyan);margin-bottom:14px}
+.dd-col ul{list-style:none}
+.dd-col li{margin-bottom:10px;position:static}
+.dd-col a{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--body-text);padding:6px 8px;border-radius:6px;font-weight:500}
+.dd-col a:hover{color:var(--white);background:rgba(90,20,240,.12)}
+.dd-icon{width:30px;height:30px;border-radius:7px;background:rgba(90,20,240,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dd-icon svg{width:16px;height:16px}
+.nav-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.wa-nav{width:40px;height:40px;background:rgba(37,211,102,.12);border:1px solid rgba(37,211,102,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.wa-nav:hover{background:#25D366}
+.wa-nav svg{width:20px;height:20px;fill:#25D366}
+.wa-nav:hover svg{fill:white}
+.nav-cta{padding:10px 22px;background:var(--electric);color:white;border-radius:var(--radius-sm);font-size:14px;font-weight:600;transition:all .2s;border:none}
+.nav-cta:hover{background:var(--imperial);box-shadow:0 6px 20px -4px rgba(90,20,240,.6)}
+.mob-menu-btn{display:flex;flex-direction:column;gap:5px;background:none;border:none;padding:8px}
+.mob-menu-btn span{width:22px;height:2px;background:var(--white);border-radius:2px}
+@media(min-width:1024px){.mob-menu-btn{display:none}}
+/* SECTIONS */
+.section{padding:110px 0}
+@media(max-width:768px){.section{padding:72px 0}}
+.section-alt{background:var(--deep-space)}
+.section-header{text-align:center;max-width:780px;margin:0 auto 64px}
+.section-header h2{margin-bottom:18px}
+.section-header p{font-size:18px;color:var(--body-text);line-height:1.65}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:140px 0 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-15%;right:-10%;width:700px;height:700px;background:radial-gradient(circle,rgba(90,20,240,.18) 0%,transparent 65%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-10%;left:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(6,182,212,.07) 0%,transparent 65%);pointer-events:none}
+.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(54,40,112,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(54,40,112,.13) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 80%)}
+.hero-inner{position:relative;z-index:1;max-width:840px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 8px;background:rgba(90,20,240,.1);border:1px solid rgba(167,139,250,.2);border-radius:var(--radius-pill);font-size:12px;color:var(--lavender);margin-bottom:28px;font-weight:500}
+.badge-dot{width:22px;height:22px;background:linear-gradient(135deg,var(--royal),var(--electric));border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.badge-dot svg{width:12px;height:12px;fill:none;stroke:white;stroke-width:2.5}
+.hero h1{margin-bottom:24px}
+.hero-sub{font-size:19px;color:var(--body-text);max-width:640px;line-height:1.7;margin-bottom:40px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:48px}
+.hero-trust{display:flex;flex-wrap:wrap;gap:24px}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.trust-item svg{width:16px;height:16px;stroke:var(--cyan);fill:none;stroke-width:2.5;flex-shrink:0}
+/* SEO vs GEO COMPARE */
+.vs-grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:768px){.vs-grid{grid-template-columns:1fr auto 1fr};align-items:center}
+.vs-col{background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-md);padding:28px}
+.vs-col.active{border-color:rgba(90,20,240,.5);background:linear-gradient(135deg,var(--midnight),rgba(90,20,240,.06))}
+.vs-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:16px}
+.vs-label.old{color:var(--muted)}
+.vs-label.new{color:var(--cyan)}
+.vs-col h3{font-size:20px;margin-bottom:16px}
+.vs-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--body-text);margin-bottom:10px;line-height:1.5}
+.vs-item svg{width:16px;height:16px;flex-shrink:0;margin-top:2px}
+.vs-item.positive svg{stroke:var(--success);fill:none;stroke-width:2.5}
+.vs-item.neutral svg{stroke:var(--muted);fill:none;stroke-width:2.5}
+.vs-divider{display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--lavender);padding:16px}
+@media(min-width:768px){.vs-divider{flex-direction:column;gap:8px;writing-mode:horizontal-tb}}
+.vs-divider-label{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--royal),var(--electric));display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:white}
+/* WHAT IS */
+.what-text h2{margin-bottom:20px}
+.what-text p{font-size:16px;color:var(--body-text);line-height:1.75;margin-bottom:16px}
+/* FEATURES */
+.features-grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:560px){.features-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.features-grid{grid-template-columns:repeat(3,1fr)}}
+.feat-card{background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-md);padding:32px 28px;transition:all .28s;position:relative;overflow:hidden}
+.feat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--electric),var(--cyan));opacity:0;transition:opacity .28s}
+.feat-card::after{content:'';position:absolute;bottom:-50px;right:-50px;width:140px;height:140px;background:radial-gradient(circle,rgba(90,20,240,.1) 0%,transparent 70%);transition:all .4s}
+.feat-card:hover{border-color:rgba(90,20,240,.55);transform:translateY(-6px);box-shadow:0 20px 40px -16px rgba(90,20,240,.22)}
+.feat-card:hover::before{opacity:1}
+.feat-card:hover::after{bottom:-20px;right:-20px}
+.feat-icon{width:52px;height:52px;border-radius:13px;background:linear-gradient(135deg,rgba(50,0,130,.6),rgba(90,20,240,.4));border:1px solid rgba(90,20,240,.3);display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:all .28s}
+.feat-icon svg{width:26px;height:26px;stroke:var(--lavender);fill:none;stroke-width:1.8}
+.feat-card:hover .feat-icon{background:linear-gradient(135deg,var(--royal),var(--electric));border-color:transparent}
+.feat-card:hover .feat-icon svg{stroke:white}
+.feat-card h3{font-size:18px;margin-bottom:10px}
+.feat-card p{font-size:14px;color:var(--body-text);line-height:1.65}
+/* STEPS */
+.steps-outer{background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-lg);overflow:hidden}
+.steps-grid{display:grid;grid-template-columns:1fr}
+@media(min-width:768px){.steps-grid{grid-template-columns:repeat(4,1fr)}}
+.step-item{padding:32px 28px;position:relative}
+@media(min-width:768px){.step-item:not(:last-child)::after{content:'';position:absolute;top:52px;right:-1px;width:2px;height:calc(100% - 52px);background:linear-gradient(to bottom,var(--slate),transparent)}}
+@media(max-width:767px){.step-item{border-bottom:1px solid var(--slate)}.step-item:last-child{border-bottom:none}}
+.step-num{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--royal),var(--electric));display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:white;margin-bottom:20px;box-shadow:0 0 0 6px rgba(90,20,240,.12)}
+.step-item h3{font-size:17px;margin-bottom:10px}
+.step-item p{font-size:14px;color:var(--body-text);line-height:1.65}
+/* AI ENGINES */
+.engines-grid{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:560px){.engines-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.engines-grid{grid-template-columns:repeat(4,1fr)}}
+.engine-card{background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-md);padding:28px 24px;display:flex;flex-direction:column;gap:16px;transition:all .28s;position:relative;overflow:hidden}
+.engine-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;opacity:0;transition:opacity .3s}
+.engine-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px -16px rgba(90,20,240,.2)}
+.engine-card:hover::before{opacity:1}
+.ec-chatgpt::before{background:linear-gradient(90deg,#10A37F,#00A67E)}
+.ec-chatgpt:hover{border-color:rgba(16,163,127,.4)}
+.ec-perplexity::before{background:linear-gradient(90deg,#20B2AA,#06B6D4)}
+.ec-perplexity:hover{border-color:rgba(6,182,212,.4)}
+.ec-google::before{background:linear-gradient(90deg,#4285F4,#EA4335)}
+.ec-google:hover{border-color:rgba(66,133,244,.4)}
+.ec-bing::before{background:linear-gradient(90deg,#008272,#00A4D4)}
+.ec-bing:hover{border-color:rgba(0,164,212,.4)}
+.engine-logo{width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;border:1px solid var(--slate)}
+.engine-logo svg{width:28px;height:28px}
+.ec-chatgpt .engine-logo{background:rgba(16,163,127,.12);border-color:rgba(16,163,127,.25)}
+.ec-perplexity .engine-logo{background:rgba(6,182,212,.12);border-color:rgba(6,182,212,.25)}
+.ec-google .engine-logo{background:rgba(66,133,244,.12);border-color:rgba(66,133,244,.25)}
+.ec-bing .engine-logo{background:rgba(0,164,212,.12);border-color:rgba(0,164,212,.25)}
+.engine-name{font-size:18px;font-weight:700;color:var(--white)}
+.engine-type{font-size:12px;color:var(--muted);margin-bottom:4px;font-weight:500;letter-spacing:.04em;text-transform:uppercase}
+.engine-desc{font-size:14px;color:var(--body-text);line-height:1.65}
+.engine-users{margin-top:auto;padding-top:14px;border-top:1px solid var(--slate);font-size:12px;font-weight:600;color:var(--lavender)}
+/* FAQ */
+.faq-wrap{max-width:760px;margin:0 auto}
+.faq-item{background:var(--midnight);border:1px solid var(--slate);border-radius:var(--radius-md);margin-bottom:10px;overflow:hidden;transition:border-color .2s}
+.faq-item.open{border-color:rgba(90,20,240,.5)}
+.faq-btn{width:100%;padding:22px 24px;background:transparent;border:none;color:var(--white);font-size:16px;font-weight:600;text-align:left;display:flex;justify-content:space-between;align-items:center;gap:16px;font-family:var(--font);cursor:pointer}
+.faq-toggle{width:28px;height:28px;border-radius:50%;background:rgba(90,20,240,.15);border:1px solid var(--slate);display:flex;align-items:center;justify-content:center;color:var(--lavender);flex-shrink:0;transition:all .2s}
+.faq-toggle svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.5;transition:transform .2s}
+.faq-item.open .faq-toggle{background:var(--electric);border-color:var(--electric);color:white}
+.faq-item.open .faq-toggle svg{transform:rotate(45deg)}
+.faq-body{max-height:0;overflow:hidden;transition:max-height .32s ease}
+.faq-item.open .faq-body{max-height:400px}
+.faq-inner{padding:0 24px 24px;font-size:15px;color:var(--body-text);line-height:1.75}
+/* STATS */
+.stats-band{padding:80px 0;background:linear-gradient(135deg,var(--deep-space) 0%,var(--midnight) 100%);border-top:1px solid var(--slate);border-bottom:1px solid var(--slate);position:relative;overflow:hidden}
+.stats-band::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(90,20,240,.1) 0%,transparent 70%);pointer-events:none}
+.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;position:relative;z-index:1}
+@media(min-width:768px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
+.stat-box{text-align:center}
+.stat-number{font-size:clamp(40px,6vw,64px);font-weight:800;line-height:1;margin-bottom:10px;background:linear-gradient(120deg,var(--lavender),var(--cyan));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat-lbl{font-size:13px;color:var(--body-text);font-weight:500;letter-spacing:.05em;text-transform:uppercase}
+/* CTA */
+.page-cta{background:linear-gradient(135deg,#030110 0%,#1A0060 30%,var(--royal) 58%,#4A10C8 82%,#6020A8 100%);position:relative;overflow:hidden}
+.page-cta::before{content:'';position:absolute;top:-40%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(6,182,212,.1) 0%,transparent 60%)}
+.page-cta::after{content:'';position:absolute;bottom:-30%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(10,0,50,.6) 0%,transparent 60%)}
+.page-cta-inner{position:relative;z-index:1;text-align:center;padding:100px 0}
+.page-cta-inner h2{color:white;margin-bottom:20px}
+.page-cta-inner>p{font-size:19px;color:rgba(255,255,255,.8);margin-bottom:40px;max-width:580px;margin-left:auto;margin-right:auto;line-height:1.65}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-btn-w{padding:16px 32px;background:white;color:var(--electric);border-radius:var(--radius-sm);font-size:16px;font-weight:700;border:none;transition:all .22s;display:flex;align-items:center;gap:8px;cursor:pointer}
+.cta-btn-w:hover{background:var(--abyss);color:white;transform:translateY(-2px)}
+.cta-btn-g{padding:16px 32px;background:transparent;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.25);border-radius:var(--radius-sm);font-size:16px;font-weight:600;transition:all .22s;display:flex;align-items:center;gap:8px;cursor:pointer}
+.cta-btn-g:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.08);color:white}
+/* FOOTER */
+footer{background:var(--abyss);border-top:1px solid var(--slate);padding:80px 0 36px}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:40px;margin-bottom:56px}
+@media(min-width:560px){.footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.footer-grid{grid-template-columns:1.6fr repeat(4,1fr)}}
+.foot-brand p{font-size:14px;color:var(--body-text);margin:16px 0 24px;max-width:300px;line-height:1.65}
+.socials{display:flex;gap:10px}
+.soc{width:38px;height:38px;background:var(--midnight);border:1px solid var(--slate);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--body-text);transition:all .2s;text-decoration:none}
+.soc:hover{border-color:var(--electric);color:var(--lavender);transform:translateY(-2px)}
+.soc svg{width:17px;height:17px;fill:currentColor}
+.foot-col h5{font-size:13px;font-weight:600;color:var(--white);margin-bottom:18px;letter-spacing:.02em}
+.foot-col ul{list-style:none}
+.foot-col li{margin-bottom:12px}
+.foot-col a{font-size:13px;color:var(--body-text);transition:color .2s}
+.foot-col a:hover{color:var(--lavender)}
+.foot-bottom{padding-top:28px;border-top:1px solid var(--slate);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
+.foot-bottom p{font-size:13px;color:var(--muted)}
+.foot-legal{display:flex;gap:24px}
+.foot-legal a{font-size:13px;color:var(--muted);transition:color .2s}
+.foot-legal a:hover{color:var(--lavender)}
+.wa-float{position:fixed;bottom:28px;right:28px;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:300;box-shadow:0 8px 24px rgba(37,211,102,.35);transition:all .22s;text-decoration:none;animation:waPulse 2.8s infinite}
+@keyframes waPulse{0%{box-shadow:0 8px 24px rgba(37,211,102,.35),0 0 0 0 rgba(37,211,102,.4)}70%{box-shadow:0 8px 24px rgba(37,211,102,.35),0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 8px 24px rgba(37,211,102,.35),0 0 0 0 rgba(37,211,102,0)}}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:30px;height:30px;fill:white}
+</style>
+</head>
+<body>
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="/" class="logo-wrap"><div class="logo-icon">A</div><span class="logo-text">adymade</span></a>
+      <ul class="nav-links">
+        <li>
+          <a href="#">Services <span class="chev">&#9662;</span></a>
+          <div class="dropdown">
+            <div class="dd-col">
+              <h5>AI &amp; Automation</h5>
+              <ul>
+                <li><a href="/ai-automation.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2"/></svg></span>AI Automation &amp; Agents</a></li>
+                <li><a href="/ai-videos.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></span>AI Videos &amp; Creatives</a></li>
+                <li><a href="/compliance-videos.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Compliance Videos</a></li>
+                <li><a href="/geo.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg></span>GEO &#8212; AI Search Ranking</a></li>
+              </ul>
+            </div>
+            <div class="dd-col">
+              <h5>Development</h5>
+              <ul>
+                <li><a href="/web-development.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>Web &amp; App Development</a></li>
+                <li><a href="/software-development.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>Custom Software</a></li>
+              </ul>
+              <h5 style="margin-top:20px">Marketing</h5>
+              <ul>
+                <li><a href="/digital-marketing.html"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>Digital Marketing</a></li>
+                <li><a href="/digital-marketing#seo"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>SEO Services</a></li>
+              </ul>
+            </div>
+            <div class="dd-col" style="background:rgba(90,20,240,.06);border-radius:10px;padding:16px">
+              <h5>GCC Expertise</h5>
+              <div style="margin-bottom:12px"><div style="font-size:13px;color:var(--lavender);font-weight:600;margin-bottom:4px">&#127480;&#127462; RGS &#8212; Tamimi Group</div><div style="font-size:12px;color:var(--body-text);line-height:1.5">Website built for a Tamimi Group scaffolding company in Saudi Arabia</div></div>
+              <a href="/case-studies/rgs-saudi-arabia" style="display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--cyan)">View case study &#8594;</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">Industries <span class="chev">&#9662;</span></a>
+          <div class="dropdown dropdown-sm">
+            <div class="dd-col"><h5>By Industry</h5><ul><li><a href="/industries/construction"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></span>Construction &amp; Scaffolding</a></li><li><a href="/industries/healthcare"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>Healthcare &amp; Clinics</a></li></ul></div>
+            <div class="dd-col"><h5>&nbsp;</h5><ul><li><a href="/industries/saas"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg></span>SaaS &amp; Tech</a></li><li><a href="/industries/manufacturing"><span class="dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 0 0 2 12h2"/></svg></span>Manufacturing</a></li></ul></div>
+          </div>
+        </li>
+        <li><a href="/case-studies.html">Our Work</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://wa.link/u03r6i" class="wa-nav" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+        <a href="https://calendly.com/addymade/15-minute-consultation-call" class="nav-cta">Book a Call</a>
+        <button class="mob-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <div class="badge-dot"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg></div>
+        GEO &#8212; Generative Engine Optimisation
+      </div>
+      <h1>When People Ask AI,<br>Your Business <span class="grad">Gets Cited.</span></h1>
+      <p class="hero-sub">GEO (Generative Engine Optimisation) ensures your business is recommended by ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot &#8212; the AI tools your customers are already using instead of traditional search.</p>
+      <div class="hero-actions">
+        <a href="/contact.html" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Get a Free GEO Audit
+        </a>
+        <a href="#ai-engines" class="btn btn-ghost">
+          See Which AI Engines
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="17" height="17"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>One of the first GEO agencies in India</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Works alongside your existing SEO</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Measurable citation tracking</div>
+        <div class="trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Schema markup included</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS GEO -->
+<section class="section section-alt">
+  <div class="container">
+    <div style="max-width:840px;margin:0 auto 56px">
+      <div class="eyebrow">What Is GEO</div>
+      <h2 style="margin-bottom:20px">The Next Frontier of Search &#8212; <span class="grad">Already Here</span></h2>
+      <p style="font-size:16px;color:var(--body-text);line-height:1.75;margin-bottom:16px">When someone types a question into ChatGPT or Perplexity, the AI does not show a list of blue links. It reads across thousands of sources, synthesises an answer, and &#8212; if it trusts your content &#8212; cites your business directly in that answer. This is GEO: the practice of optimising your online presence so AI engines trust, understand, and recommend your business.</p>
+      <p style="font-size:16px;color:var(--body-text);line-height:1.75;margin-bottom:16px">Traditional SEO optimises for Google's ranking algorithm. GEO optimises for AI understanding &#8212; structured data, entity recognition, direct-answer content, and authoritative citations. These are different disciplines requiring different strategies.</p>
+      <p style="font-size:16px;color:var(--body-text);line-height:1.75">The window to establish first-mover advantage in GEO is open right now. Most Indian businesses have not yet started &#8212; and most Indian agencies do not offer it. We do.</p>
+    </div>
+
+    <!-- SEO vs GEO comparison -->
+    <div class="vs-grid">
+      <div class="vs-col">
+        <div class="vs-label old">Traditional SEO</div>
+        <h3>Rank in Search Results</h3>
+        <div class="vs-item neutral"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></svg>Optimise for keyword rankings</div>
+        <div class="vs-item neutral"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></svg>Target search engine algorithms</div>
+        <div class="vs-item neutral"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></svg>Focus on backlinks &amp; page authority</div>
+        <div class="vs-item neutral"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></svg>User clicks on your result</div>
+        <div class="vs-item neutral"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/></svg>Measured by ranking position</div>
+      </div>
+      <div class="vs-divider">
+        <div class="vs-divider-label">vs</div>
+      </div>
+      <div class="vs-col active">
+        <div class="vs-label new">GEO &#8212; Generative Engine Optimisation</div>
+        <h3>Get Cited by AI Answers</h3>
+        <div class="vs-item positive"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Optimise for AI understanding &amp; trust</div>
+        <div class="vs-item positive"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Target ChatGPT, Perplexity, Google AI</div>
+        <div class="vs-item positive"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Focus on structured data &amp; entity signals</div>
+        <div class="vs-item positive"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>AI recommends your business in its answer</div>
+        <div class="vs-item positive"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Measured by AI citation frequency</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY FEATURES -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Key Features</div>
+      <h2>Seven Signals That Make <span class="grad">AI Engines Trust You</span></h2>
+      <p>GEO is not one tactic &#8212; it is a combination of content structure, technical signals, and authority building that collectively tells AI engines your business is the right answer to recommend.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3>Schema Markup &amp; Structured Data</h3>
+        <p>JSON-LD schema applied to every page: LocalBusiness, Service, FAQPage, BreadcrumbList, and AggregateRating. AI engines parse structured data to understand your entity, services, and credibility &#8212; without reading every word.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Direct-Answer Content Writing</h3>
+        <p>Every service page opens with a crisp, direct answer to the question it targets. This is the format AI engines pull from when generating responses &#8212; we write content specifically structured to be cited verbatim.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <h3>FAQ Schema Optimisation</h3>
+        <p>8 to 10 questions per page written exactly as your customers phrase them to ChatGPT or Perplexity, then marked up with FAQPage JSON-LD. This is the single highest-impact GEO tactic and appears in both Google rich results and AI answers.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></div>
+        <h3>Named Entity Optimisation</h3>
+        <p>AI knowledge graphs are built from named entities. We ensure your content consistently mentions real clients, real tool names, real locations, and specific outcomes &#8212; the signals that establish your entity as authoritative and verifiable.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Authority Directory Listings</h3>
+        <p>Clutch, GoodFirms, G2, Crunchbase, and LinkedIn &#8212; the sources AI engines specifically pull from when identifying service providers. We create, optimise, and maintain your presence across all AI-cited directories.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3>GEO Citation Monitoring</h3>
+        <p>We run monthly checks across ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot using your target queries &#8212; tracking whether your business appears, how it is described, and what needs to improve in the next cycle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section-alt" id="how-it-works">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">How It Works</div>
+      <h2>From Invisible to <span class="grad">AI-Cited in 4 Steps</span></h2>
+      <p>A systematic process that builds your GEO presence layer by layer &#8212; starting with the highest-impact signals and expanding from there.</p>
+    </div>
+    <div class="steps-outer">
+      <div class="steps-grid">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <h3>GEO Audit</h3>
+          <p>We run your business name and target service queries through ChatGPT, Perplexity, Google AI, and Bing Copilot. We document where you appear, how you are described, and where competitors are being cited instead. This becomes your baseline.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <h3>Signal Implementation</h3>
+          <p>We apply schema markup, rewrite key page content in direct-answer format, build FAQ schema, optimise entity mentions across your site, and create or improve your profiles on AI-cited directories. This takes 2 to 4 weeks for a full implementation.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <h3>Content &amp; Authority Building</h3>
+          <p>We publish GEO-structured blog posts, statistic pages, and comparison content that AI engines are most likely to cite. We also work to establish press mentions and third-party citations that strengthen your entity in AI knowledge graphs.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <h3>Monitor &amp; Iterate</h3>
+          <p>Monthly GEO citation checks across all four major AI engines. Report on where you are cited, what the AI says about you, and which queries need more optimisation. We iterate the content and signals based on what the data shows each month.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI ENGINES -->
+<section class="section" id="ai-engines">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">AI Engines Targeted</div>
+      <h2>Four AI Platforms. <span class="grad">One GEO Strategy.</span></h2>
+      <p>We optimise for the AI tools your customers are already using to find businesses like yours &#8212; each with its own citation patterns, content preferences, and authority signals.</p>
+    </div>
+    <div class="engines-grid">
+
+      <div class="engine-card ec-chatgpt">
+        <div class="engine-logo">
+          <svg viewBox="0 0 24 24" fill="none" width="28" height="28">
+            <path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 7.896a4.485 4.485 0 0 1 2.366-1.973V11.6a.766.766 0 0 0 .388.676l5.815 3.355-2.02 1.168a.076.076 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.896zm16.597 3.855l-5.833-3.387 2.02-1.162a.076.076 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.412-.669zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 0 0-.785 0L9.409 9.23V6.897a.066.066 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08L8.704 5.46a.795.795 0 0 0-.393.681zm1.097-2.365l2.602-1.5 2.607 1.5v2.999l-2.597 1.5-2.607-1.5z" fill="#10A37F"/>
+          </svg>
+        </div>
+        <div>
+          <div class="engine-type">AI Chatbot</div>
+          <div class="engine-name">ChatGPT</div>
+        </div>
+        <div class="engine-desc">The most-used AI assistant globally. When users ask ChatGPT for business recommendations, service comparisons, or expert guidance, we ensure your business appears in the answer &#8212; not a competitor's.</div>
+        <div class="engine-users">200M+ weekly active users</div>
+      </div>
+
+      <div class="engine-card ec-perplexity">
+        <div class="engine-logo">
+          <svg viewBox="0 0 24 24" fill="none" width="28" height="28">
+            <path d="M12 2L4 7v5l8 5 8-5V7L12 2z" stroke="#20B2AA" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M4 12v5l8 5 8-5v-5" stroke="#06B6D4" stroke-width="1.8" stroke-linejoin="round"/>
+            <line x1="12" y1="12" x2="12" y2="22" stroke="#20B2AA" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div>
+          <div class="engine-type">AI Search Engine</div>
+          <div class="engine-name">Perplexity</div>
+        </div>
+        <div class="engine-desc">Perplexity is the fastest-growing AI search engine &#8212; especially favoured by professionals and researchers. It cites sources directly and relies heavily on structured, factual content. Highly responsive to GEO optimisation.</div>
+        <div class="engine-users">15M+ monthly searches &amp; growing</div>
+      </div>
+
+      <div class="engine-card ec-google">
+        <div class="engine-logo">
+          <svg viewBox="0 0 24 24" fill="none" width="28" height="28">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+        </div>
+        <div>
+          <div class="engine-type">AI Overviews</div>
+          <div class="engine-name">Google AI</div>
+        </div>
+        <div class="engine-desc">Google's AI Overviews now appear above traditional search results for millions of queries. Businesses cited in AI Overviews receive premium placement before any organic result &#8212; and this is driven by GEO signals, not traditional SEO alone.</div>
+        <div class="engine-users">8.5B+ searches per day</div>
+      </div>
+
+      <div class="engine-card ec-bing">
+        <div class="engine-logo">
+          <svg viewBox="0 0 24 24" fill="none" width="28" height="28">
+            <path d="M5 3l5 2v12l-5-3V3z" fill="#008272"/>
+            <path d="M10 5l5 3-3 4 3 2-5 5V5z" fill="#00A4D4"/>
+            <path d="M12 12l3-4 4 5-7 6v-7z" fill="#007AB3" opacity=".8"/>
+          </svg>
+        </div>
+        <div>
+          <div class="engine-type">AI Copilot</div>
+          <div class="engine-name">Bing Copilot</div>
+        </div>
+        <div class="engine-desc">Microsoft's Bing Copilot is integrated into Windows, Microsoft 365, and Edge &#8212; meaning every Office user has AI search built in. It is under-competed by most Indian businesses, offering easier citation opportunities than Google AI.</div>
+        <div class="engine-users">100M+ daily active users</div>
+      </div>
+
+    </div>
+
+    <!-- Monthly check callout -->
+    <div style="margin-top:48px;background:var(--midnight);border:1px solid rgba(90,20,240,.3);border-radius:var(--radius-md);padding:28px 32px">
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center">
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--royal),var(--electric));display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="24" height="24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div>
+          <div style="font-size:14px;font-weight:700;color:var(--white);margin-bottom:4px">Monthly GEO Check &#8212; Ask these questions right now</div>
+          <div style="font-size:13px;color:var(--body-text);line-height:1.6">Open ChatGPT or Perplexity and ask: <span style="color:var(--lavender);font-style:italic">"Best AI automation agency in India"</span> or <span style="color:var(--lavender);font-style:italic">"Web development company for construction businesses in Saudi Arabia."</span> Does your business appear? If not, that is exactly what we fix.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-band">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px">
+      <div class="eyebrow" style="margin-bottom:16px">The GEO Opportunity</div>
+      <h2 style="font-size:clamp(26px,3.5vw,42px)">Why GEO Matters <span class="grad">Right Now</span></h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-box"><div class="stat-number">58%</div><div class="stat-lbl">Of Google searches already show AI Overviews</div></div>
+      <div class="stat-box"><div class="stat-number">200M+</div><div class="stat-lbl">Weekly ChatGPT users making business queries</div></div>
+      <div class="stat-box"><div class="stat-number">4X</div><div class="stat-lbl">Faster AI search adoption vs early SEO growth</div></div>
+      <div class="stat-box"><div class="stat-number">1st</div><div class="stat-lbl">Among Indian agencies offering GEO as a service</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Frequently Asked</div>
+      <h2>Questions About <span class="grad">GEO</span></h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item open">
+        <button class="faq-btn" onclick="toggleFaq(this)"><span>What is GEO? How is it different from traditional SEO?</span><span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-body"><div class="faq-inner">GEO (Generative Engine Optimisation) is the practice of optimising your online presence so that AI-powered search tools like ChatGPT, Perplexity, Google AI Overviews, and Bing Copilot recommend your business when answering user queries. Traditional SEO optimises content and links to rank in Google's list of blue links. GEO optimises structured data, entity signals, and direct-answer content so that AI engines trust your information enough to cite it in their generated responses. They require different strategies, but they work best together &#8212; GEO builds on a solid SEO foundation.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)"><span>How long does it take to start appearing in AI search results?</span><span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-body"><div class="faq-inner">GEO results typically begin appearing within 6 to 12 weeks of full implementation, depending on your current online presence and how competitive your target queries are. The first wins usually come from less competitive, more specific queries &#8212; such as your city or industry combined with your service &#8212; before broader queries. Unlike traditional SEO, GEO does not depend on waiting for search engine re-crawling cycles; AI engines pull from current web content more dynamically, so high-quality optimisations can show results faster.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-btn" onclick="toggleFaq(this)"><span>Does GEO replace SEO, or do I need both?</span><span class="faq-toggle"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-body"><div class="faq-inner">GEO does not replace SEO &#8212; it extends it. A strong SEO foundation (technical site health, page authority, quality backlinks) actually improves your GEO results, because AI engines trust established, well-structured websites more. We recommend running both in parallel. Many of our GEO implementations are done for clients who already have an SEO programme, adding the structured data, direct-answer content, and entity signals that SEO alone does not address. If you only have budget for one, we will tell you honestly which will have more impact for your specific situation.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="page-cta">
+  <div class="container">
+    <div class="page-cta-inner">
+      <h2>The Window for First-Mover<br>Advantage Is Open Right Now.</h2>
+      <p>Most Indian businesses have not started GEO. Most Indian agencies do not offer it. The time to establish your presence in AI search is before your competitors do.</p>
+      <div class="cta-btns">
+        <a href="/contact.html" class="cta-btn-w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Get a Free GEO Audit</a>
+        <a href="https://wa.link/u03r6i" class="cta-btn-g"><svg viewBox="0 0 24 24" fill="white" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>WhatsApp us directly</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="foot-brand"><div class="logo-wrap"><div class="logo-icon">A</div><span class="logo-text">adymade</span></div><p>A global AI and digital agency based in Indore, India. Serving clients across India, Saudi Arabia, UAE, UK, Australia, and beyond.</p><div class="socials"><a href="#" class="soc" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><a href="#" class="soc" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a><a href="#" class="soc" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a href="https://wa.link/u03r6i" class="soc" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a></div></div>
+      <div class="foot-col"><h5>Services</h5><ul><li><a href="/ai-automation.html">AI Automation</a></li><li><a href="/ai-videos.html">AI Videos</a></li><li><a href="/compliance-videos.html">Compliance Videos</a></li><li><a href="/web-development.html">Web Development</a></li><li><a href="/software-development.html">Custom Software</a></li><li><a href="/digital-marketing.html">Digital Marketing</a></li><li><a href="/geo.html">GEO Services</a></li></ul></div>
+      <div class="foot-col"><h5>Industries</h5><ul><li><a href="/industries/construction">Construction</a></li><li><a href="/industries/healthcare">Healthcare</a></li><li><a href="/industries/saas">SaaS &amp; Tech</a></li><li><a href="/industries/manufacturing">Manufacturing</a></li></ul></div>
+      <div class="foot-col"><h5>Company</h5><ul><li><a href="/about.html">About Us</a></li><li><a href="/case-studies.html">Case Studies</a></li><li><a href="/pricing.html">Pricing</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/contact.html">Contact</a></li></ul></div>
+      <div class="foot-col"><h5>Contact</h5><ul><li><a href="mailto:contact@adymade.com">contact@adymade.com</a></li><li><a href="https://wa.link/u03r6i">WhatsApp us</a></li><li><a href="https://calendly.com/addymade/15-minute-consultation-call">Book a free call</a></li><li><span style="color:var(--muted)">Indore, M.P., India</span></li></ul></div>
+    </div>
+    <div class="foot-bottom"><p>&#169; 2025 Adymade Digital LLP. All rights reserved. Made with care in Indore &#127470;&#127475;</p><div class="foot-legal"><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a></div></div>
+  </div>
+</footer>
+
+<a href="https://wa.link/u03r6i" class="wa-float" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+<script>function toggleFaq(btn){var item=btn.closest('.faq-item');var isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(el){el.classList.remove('open')});if(!isOpen)item.classList.add('open')}</script>
+</body>
+</html>
